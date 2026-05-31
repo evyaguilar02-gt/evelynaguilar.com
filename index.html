@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evelyn Aguilar · Creadora · Estratega · Guatemalteca</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F4;
+    --cream-dark: #F2EDE8;
+    --gold: #D4A853;
+    --gold-light: #E8C878;
+    --gold-pale: #F5EDD8;
+    --mauve: #D4A0A0;
+    --mauve-light: #EDD5D5;
+    --brown: #2C2020;
+    --brown-mid: #4A3728;
+    --gray: #8A8480;
+    --gray-light: #C8C4C0;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 247, 244, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 168, 83, 0.15);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: var(--brown);
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; color: var(--mauve); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'EA';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(200px, 35vw, 400px);
+    color: rgba(212, 168, 83, 0.06);
+    bottom: -60px;
+    right: -40px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-eyebrow span { color: var(--gold); opacity: 0.7; }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-name .first {
+    display: block;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 400;
+    color: var(--brown);
+  }
+  .hero-name .last {
+    display: block;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--mauve);
+  }
+  .hero-isologo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+  .hero-isologo::after { content: '·'; color: var(--gold); margin-left: 2px; font-style: normal; }
+  .hero-tagline {
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 300;
+    color: var(--brown-mid);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--gold);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: var(--brown);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(44, 32, 32, 0.15);
+  }
+  .btn-outline {
+    display: inline-block;
+    padding: 14px 36px;
+    background: transparent;
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(44, 32, 32, 0.25);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.2s forwards;
+  }
+  .hero-scroll span { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray-light); }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+  .divider { display: flex; align-items: center; gap: 20px; padding: 0 48px; margin: 0 auto; max-width: 900px; }
+  .divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold-light), transparent); }
+  .divider-mark { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 18px; }
+  section { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; line-height: 1.15; color: var(--brown); margin-bottom: 24px; }
+  .section-title em { font-style: italic; color: var(--mauve); }
+  #about { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-visual { position: relative; }
+  .about-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--cream-dark);
+    border: 1px solid rgba(212, 168, 83, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--gold-pale) 0%, var(--mauve-light) 100%);
+    opacity: 0.3;
+  }
+  .about-frame-monogram { font-family: 'Playfair Display', serif; font-size: 120px; color: rgba(212, 168, 83, 0.2); font-style: italic; position: relative; z-index: 1; }
+  .about-frame-label { position: absolute; bottom: 20px; left: 20px; font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); }
+  .about-corner { position: absolute; width: 24px; height: 24px; border-color: var(--gold); border-style: solid; }
+  .about-corner.tl { top: -8px; left: -8px; border-width: 1px 0 0 1px; }
+  .about-corner.br { bottom: -8px; right: -8px; border-width: 0 1px 1px 0; }
+  .about-text { font-size: 15px; line-height: 1.9; color: var(--brown-mid); margin-bottom: 20px; }
+  .about-text strong { color: var(--brown); font-weight: 400; }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .about-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); padding: 6px 14px; border: 1px solid rgba(212, 168, 83, 0.35); background: var(--gold-pale); }
+  .about-contact { margin-top: 36px; padding-top: 32px; border-top: 1px solid rgba(212, 168, 83, 0.2); }
+  .contact-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); margin-bottom: 12px; }
+  .contact-links { display: flex; flex-direction: column; gap: 8px; }
+  .contact-link { font-size: 13px; color: var(--brown); text-decoration: none; display: flex; align-items: center; gap: 10px; transition: color 0.3s; }
+  .contact-link:hover { color: var(--gold); }
+  .contact-link::before { content: '·'; color: var(--gold); font-size: 18px; }
+  #productos { text-align: center; }
+  .products-intro { max-width: 560px; margin: 0 auto 72px; }
+  .products-intro p { font-size: 15px; line-height: 1.8; color: var(--gray); margin-top: 16px; }
+  .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; text-align: left; }
+  .product-card { border: 1px solid rgba(212, 168, 83, 0.2); background: var(--white); position: relative; overflow: hidden; transition: transform 0.4s, box-shadow 0.4s; }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 24px 64px rgba(44, 32, 32, 0.1); }
+  .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, var(--gold), var(--mauve)); }
+  .card-badge { position: absolute; top: 24px; right: 24px; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 4px 10px; background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(212, 168, 83, 0.3); }
+  .card-header { padding: 40px 36px 0; }
+  .card-icon { width: 48px; height: 48px; background: var(--gold-pale); border: 1px solid rgba(212, 168, 83, 0.25); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; font-size: 20px; }
+  .card-name { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; color: var(--brown); line-height: 1.2; margin-bottom: 8px; }
+  .card-name em { font-style: italic; color: var(--mauve); }
+  .card-sub { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); margin-bottom: 20px; }
+  .card-desc { font-size: 14px; line-height: 1.8; color: var(--brown-mid); margin-bottom: 24px; }
+  .card-features { list-style: none; margin-bottom: 32px; }
+  .card-features li { font-size: 12px; color: var(--brown-mid); padding: 8px 0; border-bottom: 1px solid var(--cream-dark); display: flex; align-items: center; gap: 10px; }
+  .card-features li::before { content: '✦'; color: var(--gold); font-size: 8px; flex-shrink: 0; }
+  .card-footer { padding: 32px 36px; background: var(--cream); border-top: 1px solid rgba(212, 168, 83, 0.12); display: flex; flex-direction: column; gap: 16px; }
+  .card-price { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+  .price-amount { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--brown); }
+  .price-currency { font-size: 13px; color: var(--gray); font-weight: 300; }
+  .price-note { font-size: 10px; color: var(--gray); letter-spacing: 0.1em; }
+  .product-card.waitlist .card-header-bg { background: linear-gradient(135deg, var(--mauve-light), var(--cream-dark)); padding: 40px 36px 32px; }
+  .waitlist-badge { display: inline-block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 5px 12px; background: var(--mauve); color: var(--white); margin-bottom: 20px; }
+  .btn-mauve { display: inline-block; padding: 14px 36px; background: var(--mauve); color: var(--white); font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; border: none; cursor: pointer; text-align: center; }
+  .btn-mauve:hover { background: var(--brown); transform: translateY(-2px); }
+  .testimonial-strip { background: var(--brown); padding: 72px 48px; text-align: center; margin: 0; max-width: 100%; width: 100%; }
+  .testimonial-strip blockquote { font-family: 'Playfair Display', serif; font-size: clamp(20px, 3vw, 30px); font-style: italic; color: var(--cream); max-width: 800px; margin: 0 auto 20px; line-height: 1.6; }
+  .testimonial-strip cite { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+  #contacto { text-align: center; }
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(212, 168, 83, 0.15); border: 1px solid rgba(212, 168, 83, 0.15); margin-top: 56px; }
+  .contact-item { background: var(--cream); padding: 40px 32px; text-align: center; transition: background 0.3s; }
+  .contact-item:hover { background: var(--gold-pale); }
+  .contact-item-icon { font-size: 24px; margin-bottom: 12px; }
+  .contact-item-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+  .contact-item-value { font-size: 13px; color: var(--brown); text-decoration: none; transition: color 0.3s; }
+  .contact-item-value:hover { color: var(--gold); }
+  footer { padding: 48px; border-top: 1px solid rgba(212, 168, 83, 0.15); display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--brown); }
+  .footer-logo span { font-style: italic; color: var(--mauve); }
+  .footer-copy { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-light); }
+  .footer-mark { font-family: 'Playfair Display', serif; font-size: 32px; color: rgba(212, 168, 83, 0.3); font-style: italic; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes scrollPulse { 0%, 100% { opacity: 0.4; transform: scaleY(1); } 50% { opacity: 1; transform: scaleY(1.2); } }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s, transform 0.8s; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .card-body { padding: 0 36px; }
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 72px 24px; }
+    #about { grid-template-columns: 1fr; gap: 48px; }
+    .about-frame { aspect-ratio: 4/3; }
+    .products-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 20px; text-align: center; }
+    .testimonial-strip { padding: 56px 24px; }
+    .divider { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Evelyn <span>Aguilar</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero" style="max-width: 100%; padding-top: 120px;">
+  <p class="hero-eyebrow">Creadora <span>·</span> Estratega <span>·</span> Guatemalteca</p>
+  <h1 class="hero-name">
+    <span class="first">Evelyn</span>
+    <span class="last">Aguilar</span>
+  </h1>
+  <div class="hero-isologo">E</div>
+  <p class="hero-tagline">
+    Construyo negocios creativos desde Guatemala para el mundo.<br>
+    Contenido, estrategia y herramientas para creadoras que cobran lo que merecen.
+  </p>
+  <div class="hero-ctas">
+    <a href="#productos" class="btn-primary">Ver mis productos</a>
+    <a href="#about" class="btn-outline">Conocerme</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
+
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-frame">
+      <div class="about-frame-monogram">EA</div>
+      <div class="about-frame-label">Evelyn Aguilar · Guatemala City</div>
+    </div>
+    <div class="about-corner tl"></div>
+    <div class="about-corner br"></div>
+  </div>
+  <div class="about-content reveal">
+    <p class="section-eyebrow">Sobre mí</p>
+    <h2 class="section-title">Hola, soy<br><em>Evelyn.</em></h2>
+    <p class="about-text">Soy <strong>creadora de contenido, estratega digital y fundadora</strong> de Briev Co., una agencia de marketing con base en Guatemala City. Me dedico a construir en voz alta — compartiendo el proceso real de monetizar tu talento en el mundo digital.</p>
+    <p class="about-text">Creo contenido sobre <strong>trabajo remoto, UGC y marca personal</strong> en TikTok e Instagram, y desarrollo productos digitales para creadoras latinoamericanas que quieren organizar y escalar su negocio creativo.</p>
+    <div class="about-tags">
+      <span class="about-tag">UGC Creator</span>
+      <span class="about-tag">Marketing Agency</span>
+      <span class="about-tag">Trabajo Remoto</span>
+      <span class="about-tag">Guatemala</span>
+      <span class="about-tag">Freelance Education</span>
+    </div>
+    <div class="about-contact">
+      <p class="contact-label">Contacto directo</p>
+      <div class="contact-links">
+        <a href="mailto:hola@evelynaguilar.com" class="contact-link">hola@evelynaguilar.com</a>
+        <a href="https://instagram.com/ev.aglr" target="_blank" class="contact-link">@ev.aglr · Instagram</a>
+        <a href="https://tiktok.com/@evelynaguilar_gt" target="_blank" class="contact-link">@evelynaguilar_gt · TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
+
+<section id="productos">
+  <div class="products-intro reveal">
+    <p class="section-eyebrow">Productos digitales</p>
+    <h2 class="section-title">Herramientas para<br>creadoras que van<br><em>en serio.</em></h2>
+    <p>Sistemas y recursos diseñados desde la experiencia real de vivir del contenido.</p>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card reveal">
+      <span class="card-badge">Disponible ahora</span>
+      <div class="card-header">
+        <div class="card-icon">🏛️</div>
+        <p class="card-sub">Sistema de Notion para Creadoras</p>
+        <h3 class="card-name">The Creator<br><em>Vault</em></h3>
+        <p class="card-desc">Planifica tu contenido y gestiona tus marcas en un solo lugar. El sistema completo para organizar tu negocio creativo en Notion — sin hojas de cálculo dispersas, sin collabs perdidas.</p>
+      </div>
+      <div class="card-body">
+        <ul class="card-features">
+          <li>Feed de Instagram en vivo dentro de Notion</li>
+          <li>CRM de marcas y clientes con seguimiento</li>
+          <li>Dashboard automático de ingresos</li>
+          <li>Métricas y audiencia en un solo lugar</li>
+          <li>Calendario de contenido integrado</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div>
+          <div class="card-price">
+            <span class="price-amount" style="text-decoration:line-through; font-size:24px; color:var(--gray);">$47</span>
+            <span class="price-amount" style="color:var(--gold);">$36.99</span>
+            <span class="price-currency">USD · pago único</span>
+          </div>
+          <p class="price-note">Precio regular $47 · Lanzamiento $36.99</p>
+        </div>
+        <a href="https://pay.hotmart.com/F106047136Q?sck=HOTMART_PRODUCT_PAGE&off=hyxc3d5k&hotfeature=32" class="btn-primary" style="text-align:center;">
+          QUIERO THE CREATOR VAULT →
+        </a>
+      </div>
+    </div>
+
+    <div class="product-card waitlist reveal">
+      <div class="card-header-bg">
+        <span class="waitlist-badge">🗓 Lista de espera abierta</span>
+        <p class="card-sub">Educación para Freelancers Latinas</p>
+        <h3 class="card-name">Pasaporte<br><em>Freelance</em></h3>
+        <p class="card-desc" style="margin-top:16px;">La guía definitiva para latinas que quieren vivir del trabajo remoto. Aprende a conseguir clientes, fijar precios y construir una carrera freelance desde cualquier rincón de Latinoamérica.</p>
+      </div>
+      <div class="card-body" style="padding-top: 24px;">
+        <ul class="card-features">
+          <li>Estrategia para conseguir tus primeros clientes</li>
+          <li>Cómo fijar precios y negociar como pro</li>
+          <li>Plataformas y nichos más rentables</li>
+          <li>Contratos, pagos y operación freelance</li>
+          <li>Comunidad de creadoras latinoamericanas</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <div>
+          <div class="card-price">
+            <span class="price-amount" style="font-size:24px; color:var(--mauve);">Próximamente</span>
+          </div>
+          <p class="price-note">Únete a la lista · Precio especial para las primeras</p>
+        </div>
+        <a href="TU_LINK_MAILCHIMP_AQUI" target="_blank" class="btn-mauve">
+          UNIRME A LA LISTA DE ESPERA →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="testimonial-strip">
+  <blockquote>"Todo tu negocio creativo, organizado.<br>Crea más. Conecta mejor. Cobra lo que mereces."</blockquote>
+  <cite>Evelyn Aguilar · Guatemala City</cite>
+</div>
+
+<section id="contacto">
+  <div class="reveal" style="text-align: center;">
+    <p class="section-eyebrow">Hablemos</p>
+    <h2 class="section-title">¿Tienes un proyecto<br>o <em>colaboración</em>?</h2>
+    <p style="font-size:15px; color:var(--gray); max-width:480px; margin:0 auto; line-height:1.8;">Estoy abierta a colaboraciones de marcas, UGC y proyectos creativos. Escríbeme directamente.</p>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-item">
+      <div class="contact-item-icon">✉️</div>
+      <p class="contact-item-label">Email</p>
+      <a href="mailto:hola@evelynaguilar.com" class="contact-item-value">hola@evelynaguilar.com</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">📸</div>
+      <p class="contact-item-label">Instagram</p>
+      <a href="https://instagram.com/ev.aglr" target="_blank" class="contact-item-value">@ev.aglr</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">🎵</div>
+      <p class="contact-item-label">TikTok</p>
+      <a href="https://tiktok.com/@evelynaguilar_gt" target="_blank" class="contact-item-value">@evelynaguilar_gt</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Evelyn <span>Aguilar</span></div>
+  <p class="footer-copy">© 2026 · Guatemala City · Todos los derechos reservados</p>
+  <div class="footer-mark">EA</div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
