@@ -15,6 +15,9 @@
   nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-border);}
   .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--brown);text-decoration:none;}
   .nav-logo span{font-style:italic;color:var(--mauve);}
+  .nav-links{display:flex;gap:24px;list-style:none;}
+  .nav-links a{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.3s;}
+  .nav-links a:hover{color:var(--gold);}
   .nav-back{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.3s;}
   .nav-back:hover{color:var(--gold);}
   .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:16px;}
@@ -24,7 +27,7 @@
   .mobile-menu a{font-size:13px;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);text-decoration:none;}
   .mobile-menu a:hover{color:var(--gold);}
   .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:24px;cursor:pointer;color:var(--gray);background:none;border:none;}
-  @media(max-width:768px){.nav-back{display:none;}}
+  @media(max-width:768px){.nav-back{display:none;}.nav-links{display:none;}}
 
   .btn-gold{display:inline-block;padding:12px 32px;background:var(--gold);color:var(--white);font-family:'Poppins',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border-radius:8px;}
   .btn-gold:hover{background:var(--brown);transform:translateY(-2px);}
@@ -159,7 +162,14 @@
 
 <nav>
   <a href="/" class="nav-logo">Evelyn <span>Aguilar</span></a>
-  <a href="/" class="nav-back">← Volver al inicio</a>
+  <ul class="nav-links">
+    <li><a href="/#about">Sobre mí</a></li>
+    <li><a href="/#productos">Productos</a></li>
+    <li><a href="/#servicios">Asesorías</a></li>
+    <li><a href="ugc.html">UGC</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/#contacto">Contacto</a></li>
+  </ul>
   <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
     <span></span><span></span><span></span>
   </div>
@@ -172,6 +182,7 @@
   <a href="/#productos" onclick="document.getElementById('mobileMenu').classList.remove('open')">Productos</a>
   <a href="/#servicios" onclick="document.getElementById('mobileMenu').classList.remove('open')">Asesorías</a>
   <a href="ugc.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">UGC Portfolio</a>
+  <a href="/#blog" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
   <a href="/#contacto" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contacto</a>
 </div>
 
