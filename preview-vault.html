@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<base href="/evelynaguilar.com/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Creator Vault · Vista previa del sistema | Evelyn Aguilar</title>
+<meta name="description" content="Conoce cada módulo de The Creator Vault — el primer sistema Notion con dashboards en tiempo real para creadoras de contenido.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --cream:#FAF7F4;--cream-dark:#F2EDE8;--gold:#D4A853;--gold-pale:#F5EDD8;--mauve:#D4A0A0;--brown:#2C2020;--brown-mid:#4A3728;--gray:#8A8480;--white:#FFFFFF; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--brown);font-family:'Poppins',sans-serif;font-weight:300;}
+  nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(212,168,83,0.15);}
+  .nav-logo{font-family:'Playfair Display',serif;font-size:16px;color:var(--brown);text-decoration:none;}
+  .nav-logo span{font-style:italic;color:var(--mauve);}
+  .nav-back{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.3s;}
+  .nav-back:hover{color:var(--gold);}
+  .hero-mini{padding:120px 48px 60px;text-align:center;max-width:800px;margin:0 auto;}
+  .eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+  .hero-mini h1{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);font-weight:400;line-height:1.15;margin-bottom:20px;}
+  .hero-mini h1 em{font-style:italic;color:var(--gold);}
+  .hero-mini p{font-size:15px;line-height:1.8;color:var(--brown-mid);max-width:560px;margin:0 auto 36px;}
+  .btn-gold{display:inline-block;padding:14px 40px;background:var(--gold);color:var(--white);font-family:'Poppins',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;}
+  .btn-gold:hover{background:var(--brown);transform:translateY(-2px);}
+  .modules{max-width:1000px;margin:0 auto;padding:0 48px 100px;}
+  .module{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:100px;padding-bottom:100px;border-bottom:1px solid rgba(212,168,83,0.15);}
+  .module:last-child{border-bottom:none;}
+  .module.reverse{direction:rtl;}
+  .module.reverse>*{direction:ltr;}
+  .module-img{width:100%;border:1px solid rgba(212,168,83,0.2);display:block;border-radius:2px;}
+  .module-img-wrap{position:relative;}
+  .module-num{position:absolute;top:-16px;left:-16px;width:40px;height:40px;background:var(--gold);color:var(--white);font-family:'Playfair Display',serif;font-size:18px;display:flex;align-items:center;justify-content:center;}
+  .module-content{}
+  .module-tag{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  .module-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;margin-bottom:16px;line-height:1.2;}
+  .module-desc{font-size:14px;line-height:1.9;color:var(--brown-mid);margin-bottom:24px;}
+  .module-features{list-style:none;}
+  .module-features li{font-size:12px;color:var(--brown-mid);padding:6px 0;border-bottom:1px solid var(--cream-dark);display:flex;gap:10px;align-items:flex-start;}
+  .module-features li::before{content:'✦';color:var(--gold);font-size:8px;flex-shrink:0;margin-top:3px;}
+  .cta-strip{background:var(--brown);padding:80px 48px;text-align:center;}
+  .cta-strip h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:var(--cream);font-style:italic;margin-bottom:12px;}
+  .cta-strip p{font-size:14px;color:rgba(250,247,244,0.6);margin-bottom:36px;}
+  .price-row{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:32px;}
+  .price-old{font-family:'Playfair Display',serif;font-size:24px;color:rgba(250,247,244,0.3);text-decoration:line-through;}
+  .price-new{font-family:'Playfair Display',serif;font-size:52px;color:var(--gold);}
+  .price-cur{font-size:14px;color:rgba(250,247,244,0.5);}
+  footer{padding:36px 48px;border-top:1px solid rgba(212,168,83,0.15);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;}
+  .footer-logo{font-family:'Playfair Display',serif;font-size:15px;color:var(--brown);}
+  .footer-logo span{font-style:italic;color:var(--mauve);}
+  .footer-copy{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);}
+  @media(max-width:768px){nav{padding:14px 20px;}.hero-mini{padding:100px 24px 48px;}.modules{padding:0 24px 72px;}.module{grid-template-columns:1fr;gap:32px;margin-bottom:64px;padding-bottom:64px;}.module.reverse{direction:ltr;}.module-num{top:-12px;left:-12px;}.cta-strip{padding:60px 24px;}.price-new{font-size:40px;}footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/evelynaguilar.com/" class="nav-logo">Evelyn <span>Aguilar</span></a>
+  <a href="/evelynaguilar.com/" class="nav-back">← Volver</a>
+</nav>
+
+<div class="hero-mini">
+  <p class="eyebrow">The Creator Vault · Vista completa del sistema</p>
+  <h1>Todo lo que obtienes con<br><em>The Creator Vault</em></h1>
+  <p>7 módulos diseñados para que nunca más pierdas una colaboración, no sepas cuánto ganaste, ni publiques sin estrategia.</p>
+  <a href="https://pay.hotmart.com/F106047136Q?sck=HOTMART_PRODUCT_PAGE&off=hyxc3d5k&hotfeature=32" class="btn-gold">QUIERO THE CREATOR VAULT → $36.99</a>
+</div>
+
+<div class="modules">
+
+  <div class="module">
+    <div class="module-img-wrap">
+      <div class="module-num">1</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/widget-tabla.JPG" alt="Widget Instagram y Calendario de Contenido" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Gestión de Contenido</p>
+      <h2 class="module-title">Widget IG en vivo + Calendario de Contenido</h2>
+      <p class="module-desc">Ve tu feed de Instagram en tiempo real dentro de Notion mientras planificas tu próximo contenido. Todo en la misma pantalla.</p>
+      <ul class="module-features">
+        <li>Preview de tu feed 3x3 actualizado automáticamente</li>
+        <li>Estados: Publicado, Programado, En Producción</li>
+        <li>Vista calendario, tabla y pipeline de contenido</li>
+        <li>Escribe hook, guión, caption y hashtags en cada tarjeta</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module reverse">
+    <div class="module-img-wrap">
+      <div class="module-num">2</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/dash-ingresos.jpg" alt="Dashboard de Ingresos" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Finanzas Creativas</p>
+      <h2 class="module-title">Dashboard de Ingresos Automático</h2>
+      <p class="module-desc">Sabe exactamente cuánto has cobrado y cuánto te deben — sin calculadoras, sin hojas dispersas. El dashboard se actualiza solo cuando marcas un pago.</p>
+      <ul class="module-features">
+        <li>Cobrado vs por cobrar en tiempo real</li>
+        <li>Ingresos por industria, tipo de collab y cliente</li>
+        <li>Ranking de tus marcas más rentables</li>
+        <li>Gráficas automáticas por status y tipo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-img-wrap">
+      <div class="module-num">3</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/metricas.jpg" alt="Dashboard de Métricas" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Métricas y Audiencia</p>
+      <h2 class="module-title">Dashboard de Métricas Multiplataforma</h2>
+      <p class="module-desc">Tus números de TikTok, Instagram y más en un solo lugar. Comparativos mensuales, datos de audiencia y engagement rate calculado automáticamente.</p>
+      <ul class="module-features">
+        <li>KPIs totales: seguidores, vistas, interacciones</li>
+        <li>Comparativo vs mes anterior por plataforma</li>
+        <li>Datos de audiencia: género, edad, engagement</li>
+        <li>Tendencias mensuales en gráficas automáticas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module reverse">
+    <div class="module-img-wrap">
+      <div class="module-num">4</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/brand-crm.JPG" alt="Brand CRM" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Gestión de Marcas</p>
+      <h2 class="module-title">Brand CRM · Marcas y Clientes</h2>
+      <p class="module-desc">El centro de tu negocio. Registra cada marca desde el primer contacto hasta el pago recibido. Nunca más pierdas el hilo de una colaboración.</p>
+      <ul class="module-features">
+        <li>Vista tabla, Kanban y calendario de deadlines</li>
+        <li>Status: Prospecto → Negociación → Activo → Renovado</li>
+        <li>Presupuesto, entregables, brief y contacto</li>
+        <li>Checkbox de pago conectado al dashboard de ingresos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-img-wrap">
+      <div class="module-num">5</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/pipeline-brand.JPG" alt="Pipeline de Marcas Kanban" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Pipeline Visual</p>
+      <h2 class="module-title">Pipeline Kanban de Colaboraciones</h2>
+      <p class="module-desc">Arrastra las tarjetas para mover el status de cada marca. Visualiza en segundos dónde está cada colaboración y qué necesita atención.</p>
+      <ul class="module-features">
+        <li>Vista Kanban con todas las etapas de la collab</li>
+        <li>Arrastra y suelta para actualizar el status</li>
+        <li>Filtros por industria, tipo y fecha</li>
+        <li>Vista de galería por marca</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module reverse">
+    <div class="module-img-wrap">
+      <div class="module-num">6</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/pipeline-content.PNG" alt="Pipeline de Contenido" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Producción de Contenido</p>
+      <h2 class="module-title">Pipeline de Contenido por Estados</h2>
+      <p class="module-desc">De la idea a la publicación sin perder nada. Cada pieza de contenido tiene su propio flujo: idea, guión, grabación, edición, programado, publicado.</p>
+      <ul class="module-features">
+        <li>6 estados de producción para cada pieza</li>
+        <li>Vista pipeline y calendario integrados</li>
+        <li>Vinculado al widget de Instagram automáticamente</li>
+        <li>Escribe el brief completo dentro de cada tarjeta</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module">
+    <div class="module-img-wrap">
+      <div class="module-num">7</div>
+      <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/instagram.jpg" alt="Feed Instagram en vivo en Notion" class="module-img">
+    </div>
+    <div class="module-content">
+      <p class="module-tag">Preview de Feed</p>
+      <h2 class="module-title">Feed de Instagram en Tiempo Real</h2>
+      <p class="module-desc">Tu perfil de Instagram dentro de Notion. Ve exactamente cómo se ve tu feed antes de publicar y gestiona el estado de cada publicación desde ahí.</p>
+      <ul class="module-features">
+        <li>Grid 3x3 actualizado cada 5 minutos</li>
+        <li>Estado visible: Publicado, Programado, En Producción</li>
+        <li>Compatible con Reels, Posts, Carruseles y UGC</li>
+        <li>Botón de actualización manual disponible</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-strip">
+  <h2>Todo esto por un solo pago.</h2>
+  <p>Sin suscripciones. Sin renovaciones. Tuyo para siempre.</p>
+  <div class="price-row">
+    <span class="price-old">$47</span>
+    <span class="price-new">$36.99</span>
+    <span class="price-cur">USD · pago único</span>
+  </div>
+  <a href="https://pay.hotmart.com/F106047136Q?sck=HOTMART_PRODUCT_PAGE&off=hyxc3d5k&hotfeature=32" class="btn-gold" style="font-size:11px; padding:16px 48px;">
+    QUIERO THE CREATOR VAULT →
+  </a>
+  <p style="margin-top:20px; font-size:11px; color:rgba(250,247,244,0.4);">Acceso inmediato · Actualizaciones incluidas · Soporte por email</p>
+</div>
+
+<footer>
+  <div class="footer-logo">Evelyn <span>Aguilar</span></div>
+  <p class="footer-copy">© 2026 · evelynaguilar.com</p>
+  <a href="/evelynaguilar.com/" style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gray); text-decoration:none;">← Volver al inicio</a>
+</footer>
+
+</body>
+</html>
