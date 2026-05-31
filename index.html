@@ -37,13 +37,14 @@
   html{scroll-behavior:smooth;}
   body{background:var(--cream);color:var(--brown);font-family:'Poppins',sans-serif;font-weight:300;overflow-x:hidden;}
 
+  /* NAV */
   nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-border);}
   .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--brown);text-decoration:none;}
   .nav-logo span{font-style:italic;color:var(--mauve);}
   .nav-links{display:flex;gap:28px;list-style:none;}
   .nav-links a{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.3s;}
   .nav-links a:hover{color:var(--gold);}
-  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:20px;}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
   .hamburger span{display:block;width:22px;height:1.5px;background:var(--brown);transition:all 0.3s;}
   .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--cream);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;}
   .mobile-menu.open{display:flex;}
@@ -51,11 +52,13 @@
   .mobile-menu a:hover{color:var(--gold);}
   .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:24px;cursor:pointer;color:var(--gray);background:none;border:none;}
 
+  /* DIVIDER */
   .divider{display:flex;align-items:center;gap:20px;padding:0 48px;margin:0 auto;max-width:900px;}
   .divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-light),transparent);}
   .divider-mark{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:18px;}
 
-  .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 24px 56px;position:relative;overflow:hidden;background:var(--cream);}
+  /* HERO */
+  .hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:90px 24px 56px;position:relative;overflow:hidden;}
   .hero::before{content:'EA';position:absolute;font-family:'Playfair Display',serif;font-size:clamp(200px,35vw,420px);color:rgba(212,168,83,0.05);bottom:-60px;right:-40px;line-height:1;pointer-events:none;user-select:none;}
   .hero-eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gray);margin-bottom:16px;opacity:0;animation:fadeUp 0.8s 0.2s forwards;}
   .hero-eyebrow span{color:var(--gold);}
@@ -65,12 +68,13 @@
   .hero-isologo{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--gold);margin-bottom:20px;opacity:0;animation:fadeUp 0.8s 0.5s forwards;}
   .hero-isologo::after{content:'·';margin-left:2px;font-style:normal;}
   .hero-tagline{font-size:clamp(13px,1.6vw,15px);color:var(--brown-mid);max-width:480px;line-height:1.8;margin-bottom:12px;opacity:0;animation:fadeUp 0.8s 0.6s forwards;}
-  .hero-stat{display:inline-block;margin-bottom:28px;padding:7px 18px;border:1px solid var(--gold-border);background:var(--gold-pale);font-size:10px;letter-spacing:0.15em;color:var(--brown-mid);opacity:0;animation:fadeUp 0.8s 0.7s forwards;border-radius:4px;}
+  .hero-stat{display:inline-block;margin-bottom:28px;padding:7px 18px;border:1px solid var(--gold-border);background:var(--gold-pale);font-size:10px;letter-spacing:0.15em;color:var(--brown-mid);opacity:0;animation:fadeUp 0.8s 0.7s forwards;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp 0.8s 0.8s forwards;}
   .hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp 0.8s 1.2s forwards;}
   .hero-scroll span{font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-light);}
   .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s infinite;}
 
+  /* BUTTONS */
   .btn-primary{display:inline-block;padding:14px 36px;background:var(--gold);color:var(--white);font-family:'Poppins',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;border-radius:8px;}
   .btn-primary:hover{background:var(--brown);transform:translateY(-2px);box-shadow:0 8px 32px rgba(44,32,32,0.15);}
   .btn-outline{display:inline-block;padding:14px 36px;background:transparent;color:var(--brown);font-family:'Poppins',sans-serif;font-size:10px;font-weight:300;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(44,32,32,0.25);transition:all 0.3s;cursor:pointer;border-radius:8px;}
@@ -78,11 +82,13 @@
   .btn-mauve{display:inline-block;padding:14px 36px;background:var(--mauve-dark);color:var(--white);font-family:'Poppins',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;text-align:center;border-radius:8px;}
   .btn-mauve:hover{background:var(--brown);transform:translateY(-2px);}
 
-  section{padding:100px 48px;max-width:1100px;margin:0 auto;background:var(--cream);}
+  /* SECTIONS */
+  section{padding:100px 48px;max-width:1100px;margin:0 auto;}
   .section-eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
   .section-title{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,56px);font-weight:400;line-height:1.15;color:var(--brown);margin-bottom:24px;}
   .section-title em{font-style:italic;color:var(--mauve);}
 
+  /* ABOUT */
   #about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
   .about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--gold-border);}
   .about-frame{width:100%;aspect-ratio:3/4;background:var(--cream-dark);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;}
@@ -110,6 +116,7 @@
   .email-link{font-size:12px;color:var(--brown-mid);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.3s;padding:8px 12px;border:1px solid var(--gold-border);background:var(--white);border-radius:6px;}
   .email-link:hover{color:var(--gold);border-color:var(--gold);}
 
+  /* PRODUCTS */
   #productos{text-align:center;}
   .products-intro{max-width:640px;margin:0 auto 72px;}
   .products-intro p{font-size:15px;line-height:1.8;color:var(--gray);margin-top:16px;}
@@ -139,6 +146,7 @@
   .price-note{font-size:10px;color:var(--gray);letter-spacing:0.1em;}
   .waitlist-badge{display:inline-block;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 12px;background:var(--mauve-dark);color:var(--white);margin-bottom:16px;border-radius:4px;}
 
+  /* MINI CAROUSEL */
   .mini-carousel{position:relative;overflow:hidden;background:#1a1a1a;margin-bottom:0;}
   .mini-track{display:flex;transition:transform 0.4s ease;}
   .mini-slide{min-width:100%;}
@@ -153,6 +161,7 @@
   .see-more-link{display:block;text-align:center;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown);text-decoration:none;padding:12px;background:var(--gold-pale);border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);transition:all 0.3s;font-weight:500;}
   .see-more-link:hover{background:var(--gold);color:var(--white);}
 
+  /* SERVICES */
   #servicios{text-align:center;}
   .services-intro{max-width:560px;margin:0 auto 56px;}
   .services-intro p{font-size:15px;line-height:1.8;color:var(--gray);margin-top:16px;}
@@ -169,10 +178,12 @@
   .service-topic{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--brown-mid);}
   .service-topic::before{content:'✦';color:var(--gold);font-size:8px;flex-shrink:0;}
 
-  .testimonial-strip{background:var(--brown);padding:72px 48px;text-align:center;}
+  /* TESTIMONIAL */
+  .testimonial-strip{background:var(--brown);padding:72px 48px;text-align:center;border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);}
   .testimonial-strip blockquote{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,30px);font-style:italic;color:var(--cream);max-width:800px;margin:0 auto 20px;line-height:1.6;}
   .testimonial-strip cite{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-style:normal;}
 
+  /* CONTACT */
   #contacto{text-align:center;}
   .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--mauve-border);border:1px solid var(--mauve-border);margin-top:48px;}
   .contact-item{background:var(--white);padding:36px 24px;text-align:center;transition:background 0.3s;}
@@ -194,20 +205,24 @@
   .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--mauve);}
   .form-group textarea{height:120px;resize:vertical;}
 
-  footer{padding:48px;border-top:1px solid var(--gold-border);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;background:var(--cream);}
+  /* FOOTER */
+  footer{padding:48px;border-top:1px solid var(--gold-border);display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;}
   .footer-logo{font-family:'Playfair Display',serif;font-size:15px;color:var(--brown);}
   .footer-logo span{font-style:italic;color:var(--mauve);}
   .footer-copy{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-light);}
   .footer-mark{font-family:'Playfair Display',serif;font-size:32px;color:rgba(212,168,83,0.2);font-style:italic;}
 
+  /* ANIMATIONS */
   @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
   @keyframes scrollPulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
   .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.8s,transform 0.8s;}
   .reveal.visible{opacity:1;transform:translateY(0);}
 
+  /* RESPONSIVE */
   @media(max-width:768px){
     nav{padding:16px 24px;}
     .nav-links{display:none;}
+    .hamburger{display:flex;}
     section{padding:72px 24px;}
     #about{grid-template-columns:1fr;gap:48px;}
     .products-grid{grid-template-columns:1fr;}
@@ -248,21 +263,22 @@
   <a href="https://pay.hotmart.com/F106047136Q?sck=HOTMART_PRODUCT_PAGE&off=hyxc3d5k&hotfeature=32" style="color:var(--gold);">Comprar The Creator Vault →</a>
 </div>
 
+<!-- HERO -->
 <section class="hero" style="max-width:100%;padding-top:90px;">
   <p class="hero-eyebrow">Creadora <span>·</span> Estratega <span>·</span> Guatemalteca</p>
   <h1 class="hero-name"><span class="first">Evelyn</span><span class="last">Aguilar</span></h1>
-  <div class="hero-isologo">E</div>
   <p class="hero-tagline">Experta en trabajo remoto y estrategia digital.<br>Creo sistemas, contenido y productos que convierten talento en ingresos reales.</p>
   <div class="hero-stat">💰 +$13K facturados en trabajo remoto y negocio digital</div>
   <div class="hero-ctas">
     <a href="#productos" class="btn-primary">Ver mis productos</a>
     <a href="#servicios" class="btn-outline">Asesorías 1:1</a>
+    <a href="ugc.html" class="btn-outline">Portfolio UGC</a>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
 <div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="about-visual reveal">
     <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/evelyn.jpg" alt="Evelyn Aguilar" class="about-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -302,6 +318,7 @@
 
 <div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
 
+<!-- PRODUCTS -->
 <section id="productos">
   <div class="products-intro reveal">
     <p class="section-eyebrow">Productos digitales</p>
@@ -353,8 +370,10 @@
         <a href="https://pay.hotmart.com/F106047136Q?sck=HOTMART_PRODUCT_PAGE&off=hyxc3d5k&hotfeature=32" class="btn-primary" style="text-align:center;">QUIERO THE CREATOR VAULT →</a>
       </div>
     </div>
+
     <div class="product-card waitlist reveal">
       <div class="card-header-bg">
+        <img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/pasaporte-freelance.png" alt="Pasaporte Freelance" style="width:100%;height:180px;object-fit:cover;display:block;margin-bottom:20px;border-radius:4px;" onerror="this.style.display='none'">
         <span class="waitlist-badge">🗓 Lista de espera abierta</span>
         <p class="card-sub">De $0 a $2K trabajando remoto sin experiencia previa</p>
         <h3 class="card-name">🛂 Pasaporte <em style="color:var(--mauve-dark);">Freelance</em></h3>
@@ -391,6 +410,7 @@
 
 <div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
 
+<!-- SERVICIOS -->
 <section id="servicios">
   <div class="services-intro reveal">
     <p class="section-eyebrow">Asesorías 1:1</p>
@@ -422,11 +442,13 @@
   </div>
 </section>
 
+<!-- TESTIMONIAL -->
 <div class="testimonial-strip">
   <blockquote>"No necesitas experiencia. No necesitas contactos.<br>Necesitas la estrategia correcta y empezar."</blockquote>
   <cite>Evelyn Aguilar · Guatemala City</cite>
 </div>
 
+<!-- CONTACT -->
 <section id="contacto">
   <div class="reveal" style="text-align:center;">
     <p class="section-eyebrow">Hablemos</p>
