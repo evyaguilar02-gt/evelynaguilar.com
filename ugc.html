@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UGC Portfolio · Evelyn Aguilar · UGC Creator Guatemala</title>
-<meta name="description" content="Portfolio UGC de Evelyn Aguilar — creadora de contenido especializada en lifestyle, moda, belleza, tech y viajes. Embajadora INDGO. Colaboraciones con marcas líderes en Guatemala.">
+<meta name="description" content="Portfolio UGC de Evelyn Aguilar — creadora especializada en lifestyle, moda, belleza, tech y viajes. Embajadora INDGO by Denim Art.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{--cream:#FAF7F4;--cream-dark:#F2EDE8;--gold:#D4A853;--gold-light:#E8C878;--gold-pale:#F5EDD8;--gold-border:rgba(212,168,83,0.25);--mauve:#D4A0A0;--mauve-dark:#A07070;--mauve-light:#EDD5D5;--mauve-border:rgba(212,160,160,0.3);--brown:#2C2020;--brown-mid:#4A3728;--gray:#8A8480;--gray-light:#C8C4C0;--white:#FFFFFF;}
@@ -12,36 +12,31 @@
   html{scroll-behavior:smooth;}
   body{background:var(--cream);color:var(--brown);font-family:'Poppins',sans-serif;font-weight:300;overflow-x:hidden;}
 
-  /* NAV */
   nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-border);}
   .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--brown);text-decoration:none;}
   .nav-logo span{font-style:italic;color:var(--mauve);}
   .nav-back{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);text-decoration:none;transition:color 0.3s;}
   .nav-back:hover{color:var(--gold);}
   .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;margin-left:16px;}
-  .hamburger span{display:block;width:22px;height:1.5px;background:var(--brown);transition:all 0.3s;}
+  .hamburger span{display:block;width:22px;height:1.5px;background:var(--brown);}
   .mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--cream);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:36px;}
   .mobile-menu.open{display:flex;}
-  .mobile-menu a{font-size:13px;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);text-decoration:none;transition:color 0.3s;}
+  .mobile-menu a{font-size:13px;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);text-decoration:none;}
   .mobile-menu a:hover{color:var(--gold);}
   .mobile-menu-close{position:absolute;top:24px;right:24px;font-size:24px;cursor:pointer;color:var(--gray);background:none;border:none;}
   @media(max-width:768px){.nav-back{display:none;}}
 
-  /* BUTTONS */
   .btn-gold{display:inline-block;padding:12px 32px;background:var(--gold);color:var(--white);font-family:'Poppins',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border-radius:8px;}
   .btn-gold:hover{background:var(--brown);transform:translateY(-2px);}
 
-  /* HERO */
   .hero{padding:120px 48px 72px;text-align:center;max-width:860px;margin:0 auto;}
   .eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
   .hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,64px);font-weight:400;line-height:1.15;margin-bottom:20px;color:var(--brown);}
   .hero h1 em{font-style:italic;color:var(--mauve);}
   .hero-intro{font-size:15px;line-height:1.9;color:var(--brown-mid);max-width:640px;margin:0 auto 32px;}
-  .hero-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+  .hero-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
   .hero-tag{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:6px 16px;border:1px solid var(--gold-border);color:var(--gold);background:var(--gold-pale);border-radius:4px;}
-
-  /* SOCIAL ROW */
-  .social-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+  .social-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:32px;}
   .social-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--gold-border);background:var(--white);text-decoration:none;font-size:12px;color:var(--brown);border-radius:8px;transition:all 0.3s;}
   .social-pill:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
   .social-pill-icon{width:24px;height:24px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -49,42 +44,50 @@
   .social-pill-icon.tt{background:#000;}
   .social-pill-icon svg{width:13px;height:13px;fill:white;}
 
-  /* DIVIDER */
   .divider{display:flex;align-items:center;gap:20px;padding:0 48px;margin:0 auto;max-width:900px;}
   .divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-light),transparent);}
   .divider-mark{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:18px;}
 
-  /* BRANDS */
   .brands-section{max-width:1100px;margin:0 auto;padding:0 48px 80px;}
   .brands-header{text-align:center;margin-bottom:64px;}
   .brands-header h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;margin-bottom:12px;color:var(--brown);}
   .brands-header h2 em{font-style:italic;color:var(--mauve);}
   .brands-header p{font-size:14px;color:var(--gray);max-width:480px;margin:0 auto;}
 
-  /* BRAND BLOCK */
   .brand-block{margin-bottom:96px;padding-bottom:96px;border-bottom:1px solid var(--gold-border);}
   .brand-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-  .brand-label{display:flex;align-items:center;gap:16px;margin-bottom:40px;flex-wrap:wrap;}
+  .brand-label{display:flex;align-items:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;}
   .brand-name{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--brown);}
-  .brand-tag{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 12px;background:var(--mauve-light);color:var(--mauve-dark);border-radius:4px;}
-  .brand-line{flex:1;height:1px;background:linear-gradient(to right,var(--gold-border),transparent);}
+  .brand-tag{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 12px;background:var(--mauve-light);color:var(--mauve-dark);border-radius:4px;}
+  .brand-line{flex:1;height:1px;background:linear-gradient(to right,var(--gold-border),transparent);min-width:40px;}
 
-  /* VIDEO GRID */
-  .videos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-bottom:32px;}
-  .iphone-mockup{position:relative;width:100%;max-width:240px;margin:0 auto;}
-  .iphone-shell{background:#1a1a1a;border-radius:36px;padding:10px;box-shadow:0 24px 48px rgba(44,32,32,0.2),inset 0 0 0 2px #2a2a2a;}
-  .iphone-notch{width:80px;height:20px;background:#1a1a1a;border-radius:0 0 12px 12px;position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:10;}
-  .iphone-screen{border-radius:28px;overflow:hidden;background:#000;aspect-ratio:9/16;position:relative;}
+  /* VIDEO + INFO LAYOUT */
+  .video-with-info{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start;}
+  .videos-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+
+  /* IPHONE MOCKUP */
+  .iphone-mockup{width:100%;max-width:200px;margin:0 auto;}
+  .iphone-shell{background:#1a1a1a;border-radius:32px;padding:9px;box-shadow:0 20px 48px rgba(44,32,32,0.2),inset 0 0 0 2px #2a2a2a;}
+  .iphone-notch{width:70px;height:18px;background:#1a1a1a;border-radius:0 0 10px 10px;position:absolute;top:9px;left:50%;transform:translateX(-50%);z-index:10;}
+  .iphone-wrapper{position:relative;}
+  .iphone-screen{border-radius:24px;overflow:hidden;background:#000;aspect-ratio:9/16;}
   .iphone-screen iframe{width:100%;height:100%;border:none;display:block;}
-  .iphone-home{width:80px;height:4px;background:#333;border-radius:4px;margin:8px auto 0;}
-  .video-caption{margin-top:16px;text-align:center;}
-  .video-caption h4{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;color:var(--brown);margin-bottom:6px;line-height:1.3;}
-  .video-caption p{font-size:11px;color:var(--gray);line-height:1.6;padding:0 8px;}
+  .iphone-home{width:70px;height:3px;background:#333;border-radius:3px;margin:7px auto 0;}
 
-  /* STATS TAGS */
-  .stats-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
+  .video-info{padding-top:8px;}
+  .video-info h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--brown);margin-bottom:12px;line-height:1.3;}
+  .video-info p{font-size:13px;color:var(--brown-mid);line-height:1.8;margin-bottom:20px;}
+
+  /* MINI VIDEO ITEM for INDGO grid */
+  .mini-video-item{text-align:center;}
+  .mini-video-item .iphone-mockup{max-width:180px;}
+  .mini-video-caption{margin-top:12px;}
+  .mini-video-caption h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;color:var(--brown);margin-bottom:4px;line-height:1.3;}
+  .mini-video-caption p{font-size:11px;color:var(--gray);line-height:1.5;padding:0 4px;}
+
+  /* STAT TAGS */
+  .stats-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px;justify-content:center;}
   .stat-tag{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid var(--gold-border);background:var(--gold-pale);color:var(--brown-mid);font-size:10px;letter-spacing:0.1em;border-radius:20px;}
-  .stat-tag .icon{font-size:14px;}
 
   /* EQUIPO */
   .equipo-section{background:var(--cream-dark);padding:80px 48px;text-align:center;}
@@ -94,8 +97,9 @@
   .equipo-inner>p{font-size:14px;color:var(--gray);max-width:480px;margin:0 auto 48px;}
   .equipo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;}
   .equipo-item{text-align:center;}
-  .equipo-img{width:80px;height:80px;object-fit:contain;margin:0 auto 12px;display:block;filter:drop-shadow(0 4px 12px rgba(44,32,32,0.12));}
-  .equipo-item h4{font-size:11px;font-weight:400;letter-spacing:0.08em;color:var(--brown);margin-bottom:4px;line-height:1.3;}
+  .equipo-img-wrap{width:100px;height:100px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;background:var(--white);border-radius:12px;border:1px solid var(--gold-border);overflow:hidden;padding:8px;}
+  .equipo-img{width:100%;height:100%;object-fit:contain;display:block;}
+  .equipo-item h4{font-size:11px;font-weight:400;letter-spacing:0.05em;color:var(--brown);margin-bottom:4px;line-height:1.4;}
   .equipo-item p{font-size:10px;color:var(--gray);}
 
   /* PROCESO */
@@ -105,15 +109,15 @@
   .proceso-section>p{font-size:14px;color:var(--gray);text-align:center;max-width:480px;margin:0 auto 48px;}
   .proceso-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;}
   .proceso-step{text-align:center;position:relative;padding:0 8px;}
-  .proceso-step:not(:last-child)::after{content:'→';position:absolute;top:26px;right:-10px;color:var(--gold);font-size:16px;}
-  .step-circle{width:56px;height:56px;background:var(--gold);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px;}
+  .proceso-step:not(:last-child)::after{content:'→';position:absolute;top:20px;right:-10px;color:var(--gold);font-size:16px;}
+  .step-icon{font-size:36px;margin-bottom:14px;display:block;line-height:1;}
   .step-name{font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown);margin-bottom:8px;}
   .step-desc{font-size:11px;color:var(--gray);line-height:1.5;}
 
   /* CTA */
   .cta-strip{background:var(--brown);padding:72px 48px;text-align:center;}
   .cta-strip h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:var(--cream);font-style:italic;margin-bottom:12px;}
-  .cta-strip p{font-size:14px;color:rgba(250,247,244,0.6);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;}
+  .cta-strip p{font-size:14px;color:rgba(250,247,244,0.6);max-width:480px;margin:0 auto 32px;}
   .cta-social{display:flex;justify-content:center;gap:12px;margin-top:24px;flex-wrap:wrap;}
   .cta-social a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid rgba(212,168,83,0.3);color:rgba(250,247,244,0.7);text-decoration:none;font-size:11px;letter-spacing:0.15em;border-radius:6px;transition:all 0.3s;}
   .cta-social a:hover{border-color:var(--gold);color:var(--gold);}
@@ -127,7 +131,9 @@
     nav{padding:14px 20px;}
     .hero{padding:100px 24px 56px;}
     .brands-section{padding:0 24px 60px;}
-    .videos-grid{grid-template-columns:1fr 1fr;}
+    .video-with-info{grid-template-columns:1fr;}
+    .iphone-mockup{max-width:200px;}
+    .videos-row{grid-template-columns:1fr 1fr;}
     .equipo-section{padding:60px 24px;}
     .equipo-grid{grid-template-columns:repeat(3,1fr);gap:16px;}
     .proceso-section{padding:60px 24px;}
@@ -136,7 +142,6 @@
     .cta-strip{padding:56px 24px;}
     footer{flex-direction:column;gap:16px;text-align:center;padding:32px 24px;}
     .divider{padding:0 24px;}
-    .stats-tags{justify-content:center;}
   }
 </style>
 </head>
@@ -165,7 +170,7 @@
   <p class="eyebrow">UGC Creator · Lifestyle · Moda · Belleza · Tech · Viajes</p>
   <h1>Portfolio <em>Creativo</em></h1>
   <p class="hero-intro">
-    Soy Evelyn Aguilar, creadora UGC especializada en contenido que detiene el scroll, genera deseo real y convierte. Trabajo con marcas que buscan autenticidad sobre producción — contenido que se siente real porque lo es. Mis colaboraciones están diseñadas estratégicamente para cada marca: entiendo su tono, su audiencia y lo que necesita comunicar antes de grabar un solo segundo.
+    Soy Evelyn Aguilar, creadora UGC con experiencia trabajando con marcas que buscan contenido que convierte. Entiendo lo que una agencia o marca necesita antes de grabar: tono, audiencia, objetivo y resultado. Creo piezas estratégicas — con hook, narrativa y CTA — que se integran naturalmente al feed y activan la intención de compra.
   </p>
   <div class="hero-tags">
     <span class="hero-tag">👗 Moda & Lifestyle</span>
@@ -194,38 +199,37 @@
   <div class="brands-header">
     <p class="eyebrow">Colaboraciones</p>
     <h2>Marcas con las que<br>he <em>trabajado</em></h2>
-    <p>Cada pieza de contenido tiene una estrategia detrás — hook, narrativa y CTA diseñados para el objetivo de cada marca.</p>
+    <p>Cada pieza tiene una estrategia detrás — hook, narrativa y CTA diseñados para el objetivo de cada marca.</p>
   </div>
 
   <!-- ELENA MELENA -->
   <div class="brand-block">
     <div class="brand-label">
       <h3 class="brand-name">Elena Melena</h3>
-      <span class="brand-tag">💆 Cuidado del Cabello</span>
+      <span class="brand-tag">💆 Beauty & Haircare</span>
       <span class="brand-tag">✅ Colaboración Activa</span>
       <div class="brand-line"></div>
     </div>
-    <div class="videos-grid" style="grid-template-columns:240px;">
-      <div class="video-item">
+    <div class="video-with-info">
+      <div class="iphone-wrapper">
         <div class="iphone-mockup">
           <div class="iphone-shell">
             <div class="iphone-notch"></div>
             <div class="iphone-screen">
-              <iframe src="https://www.youtube.com/embed/iSI3ciFhUX8?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="Elena Melena UGC"></iframe>
+              <iframe src="https://www.youtube.com/embed/iSI3ciFhUX8" allowfullscreen allow="autoplay; encrypted-media" title="Elena Melena UGC"></iframe>
             </div>
             <div class="iphone-home"></div>
           </div>
         </div>
-        <div class="video-caption">
-          <h4>Elena Melena · UGC</h4>
-          <p>Contenido basado en experiencia real de uso — autenticidad que genera confianza y convierte.</p>
+      </div>
+      <div class="video-info">
+        <h4>Elena Melena · Contenido UGC</h4>
+        <p>Colaboración en categoría Beauty & Cuidado del cabello. Contenido basado en experiencia real de uso del producto — autenticidad que genera confianza y activa la decisión de compra.</p>
+        <div class="stats-tags" style="justify-content:flex-start;margin-top:16px;">
+          <span class="stat-tag">✅ Colaboración activa</span>
+          <span class="stat-tag">💆 Beauty & Haircare</span>
         </div>
       </div>
-    </div>
-    <div class="stats-tags">
-      <span class="stat-tag"><span class="icon">🎬</span> 2 videos por mes</span>
-      <span class="stat-tag"><span class="icon">✅</span> Colaboración activa</span>
-      <span class="stat-tag"><span class="icon">💆</span> Beauty & Haircare</span>
     </div>
   </div>
 
@@ -238,58 +242,64 @@
       <span class="brand-tag">✅ Colaboración Activa</span>
       <div class="brand-line"></div>
     </div>
-    <div class="videos-grid">
-      <div class="video-item">
-        <div class="iphone-mockup">
-          <div class="iphone-shell">
-            <div class="iphone-notch"></div>
-            <div class="iphone-screen">
-              <iframe src="https://www.youtube.com/embed/gcHFfjMs_Oc?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="INDGO Outfits Denim"></iframe>
+    <div class="videos-row">
+      <div class="mini-video-item">
+        <div class="iphone-wrapper">
+          <div class="iphone-mockup">
+            <div class="iphone-shell">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <iframe src="https://www.youtube.com/embed/gcHFfjMs_Oc" allowfullscreen allow="autoplay; encrypted-media" title="INDGO Outfits Denim"></iframe>
+              </div>
+              <div class="iphone-home"></div>
             </div>
-            <div class="iphone-home"></div>
           </div>
         </div>
-        <div class="video-caption">
+        <div class="mini-video-caption">
           <h4>INDGO · Outfits Denim</h4>
           <p>Video con transiciones y audio en tendencia para mostrar 2 outfits del mismo estilo en diferente color.</p>
         </div>
       </div>
-      <div class="video-item">
-        <div class="iphone-mockup">
-          <div class="iphone-shell">
-            <div class="iphone-notch"></div>
-            <div class="iphone-screen">
-              <iframe src="https://www.youtube.com/embed/WNBB96WgJOI?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="INDGO Desfile Hípico"></iframe>
+      <div class="mini-video-item">
+        <div class="iphone-wrapper">
+          <div class="iphone-mockup">
+            <div class="iphone-shell">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <iframe src="https://www.youtube.com/embed/WNBB96WgJOI" allowfullscreen allow="autoplay; encrypted-media" title="INDGO Desfile Hípico"></iframe>
+              </div>
+              <div class="iphone-home"></div>
             </div>
-            <div class="iphone-home"></div>
           </div>
         </div>
-        <div class="video-caption">
+        <div class="mini-video-caption">
           <h4>INDGO · Desfile Hípico</h4>
           <p>Video con transición creativa para mostrar outfits en contexto de evento.</p>
         </div>
       </div>
-      <div class="video-item">
-        <div class="iphone-mockup">
-          <div class="iphone-shell">
-            <div class="iphone-notch"></div>
-            <div class="iphone-screen">
-              <iframe src="https://www.youtube.com/embed/SHPyRZLAECE?rel=0&modestbranding=1" allowfullscreen loading="lazy" title="INDGO Denim Day"></iframe>
+      <div class="mini-video-item">
+        <div class="iphone-wrapper">
+          <div class="iphone-mockup">
+            <div class="iphone-shell">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <iframe src="https://www.youtube.com/embed/SHPyRZLAECE" allowfullscreen allow="autoplay; encrypted-media" title="INDGO Denim Day"></iframe>
+              </div>
+              <div class="iphone-home"></div>
             </div>
-            <div class="iphone-home"></div>
           </div>
         </div>
-        <div class="video-caption">
+        <div class="mini-video-caption">
           <h4>VIDEO PROMOCIONAL DENIM DAY</h4>
           <p>Para activar ventas con promo 2x1 — urgencia, FOMO y CTA directo a compra.</p>
         </div>
       </div>
     </div>
     <div class="stats-tags">
-      <span class="stat-tag"><span class="icon">🎬</span> 2 videos por mes</span>
-      <span class="stat-tag"><span class="icon">📸</span> 4 historias por mes</span>
-      <span class="stat-tag"><span class="icon">⭐</span> Embajadora de marca</span>
-      <span class="stat-tag"><span class="icon">👗</span> Moda & Denim</span>
+      <span class="stat-tag">🎬 2 videos por mes</span>
+      <span class="stat-tag">📸 4 historias por mes</span>
+      <span class="stat-tag">⭐ Embajadora de marca</span>
+      <span class="stat-tag">👗 Moda & Denim</span>
     </div>
   </div>
 
@@ -300,33 +310,40 @@
   <div class="equipo-inner">
     <p class="eyebrow" style="color:var(--gold);">Setup profesional</p>
     <h2>Equipo de <em>Producción</em></h2>
-    <p>Trabajo con equipo que me permite entregar contenido de alta calidad listo para uso orgánico y campañas de paid media.</p>
+    <p>Trabajo con equipo que me permite entregar contenido de alta calidad listo para uso orgánico y paid media.</p>
     <div class="equipo-grid">
       <div class="equipo-item">
-        <img src="https://store.dji.com/cdn-cgi/image/format=auto,fit=scale-down,w=600/https://dl.djicdn.com/uploads/dji_products/en/osmo_pocket_3/product/op3_1.jpg" alt="DJI Osmo Pocket 3" class="equipo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div style="display:none;width:80px;height:80px;background:var(--gold-pale);border:1px solid var(--gold-border);border-radius:50%;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;">🎥</div>
+        <div class="equipo-img-wrap">
+          <img src="https://dji-official-fe.djicdn.com/dps/740e7f0bd5f01de77059db5cb09ccf57.png" alt="DJI Osmo Pocket 3" class="equipo-img" onerror="this.outerHTML='<span style=font-size:40px>🎥</span>'">
+        </div>
         <h4>DJI Osmo Pocket 3</h4>
         <p>Cámara principal 4K</p>
       </div>
       <div class="equipo-item">
-        <img src="https://store.dji.com/cdn-cgi/image/format=auto,fit=scale-down,w=600/https://dl.djicdn.com/uploads/dji_products/en/DJI_Mic_2/product/dji_mic2_1.jpg" alt="DJI Mic 2" class="equipo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div style="display:none;width:80px;height:80px;background:var(--gold-pale);border:1px solid var(--gold-border);border-radius:50%;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;">🎙️</div>
+        <div class="equipo-img-wrap">
+          <img src="https://dji-official-fe.djicdn.com/dps/8e2b0873f7f83dc95ac1b42ca43e0a23.png" alt="DJI Mic 2" class="equipo-img" onerror="this.outerHTML='<span style=font-size:40px>🎙️</span>'">
+        </div>
         <h4>DJI Mic 2</h4>
         <p>Audio profesional inalámbrico</p>
       </div>
       <div class="equipo-item">
-        <img src="https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg" alt="iPhone 15 Pro Max" class="equipo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div style="display:none;width:80px;height:80px;background:var(--gold-pale);border:1px solid var(--gold-border);border-radius:50%;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;">📱</div>
+        <div class="equipo-img-wrap">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1692923777972" alt="iPhone 15 Pro Max Silver" class="equipo-img" onerror="this.outerHTML='<span style=font-size:40px>📱</span>'">
+        </div>
         <h4>iPhone 15 Pro Max</h4>
         <p>Cámara secundaria</p>
       </div>
       <div class="equipo-item">
-        <div style="width:80px;height:80px;background:var(--gold-pale);border:1px solid var(--gold-border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;">🔭</div>
-        <h4>Lente Gran Angular + Filtros ND Neewer</h4>
+        <div class="equipo-img-wrap">
+          <img src="https://dji-official-fe.djicdn.com/dps/b2f5a9c3c47e39c97ccf3aacd14f0dae.png" alt="DJI Osmo Pocket Wide Angle Lens" class="equipo-img" onerror="this.outerHTML='<span style=font-size:40px>🔭</span>'">
+        </div>
+        <h4>Lente Gran Angular DJI + Filtros ND Neewer</h4>
         <p>Óptica e iluminación</p>
       </div>
       <div class="equipo-item">
-        <div style="width:80px;height:80px;background:var(--gold-pale);border:1px solid var(--gold-border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;">🎬</div>
+        <div class="equipo-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61hFMNwcGkL._AC_SL1500_.jpg" alt="Trípode profesional" class="equipo-img" onerror="this.outerHTML='<span style=font-size:40px>🎬</span>'">
+        </div>
         <h4>Trípode Profesional</h4>
         <p>Estabilización y ángulos</p>
       </div>
@@ -336,32 +353,32 @@
 
 <!-- PROCESO -->
 <div class="proceso-section">
-  <p class="eyebrow" style="text-align:center;">Cómo trabajo</p>
+  <p class="eyebrow" style="text-align:center;color:var(--gold);">Cómo trabajo</p>
   <h2>Proceso de <em>trabajo</em></h2>
   <p>Un proceso estructurado que garantiza contenido alineado a los objetivos de cada marca, con calidad consistente en cada entrega.</p>
   <div class="proceso-steps">
     <div class="proceso-step">
-      <div class="step-circle">📋</div>
+      <span class="step-icon">📋</span>
       <div class="step-name">Brief</div>
       <div class="step-desc">Entender objetivos, audiencia y tono de la marca</div>
     </div>
     <div class="proceso-step">
-      <div class="step-circle">✍️</div>
+      <span class="step-icon">✍️</span>
       <div class="step-name">Concepto y Guión</div>
       <div class="step-desc">Hook, estructura narrativa y aprobación previa</div>
     </div>
     <div class="proceso-step">
-      <div class="step-circle">🎥</div>
+      <span class="step-icon">🎥</span>
       <div class="step-name">Producción</div>
       <div class="step-desc">Grabación cuidando estética, luz y storytelling</div>
     </div>
     <div class="proceso-step">
-      <div class="step-circle">✂️</div>
+      <span class="step-icon">🎬</span>
       <div class="step-name">Edición</div>
       <div class="step-desc">Edición dinámica acorde al estilo de cada marca</div>
     </div>
     <div class="proceso-step">
-      <div class="step-circle">🚀</div>
+      <span class="step-icon">🚀</span>
       <div class="step-name">Entrega</div>
       <div class="step-desc">Archivos en fecha acordada listos para publicar</div>
     </div>
@@ -371,7 +388,7 @@
 <!-- CTA -->
 <div class="cta-strip">
   <h2>¿Trabajamos juntos?</h2>
-  <p style="margin-bottom:24px;">Disponible para colaboraciones de marca, UGC y contenido para paid ads. Escríbeme y conversamos.</p>
+  <p>Disponible para colaboraciones de marca, UGC y contenido para paid ads. Escríbeme y conversamos.</p>
   <a href="mailto:hola@evelynaguilar.com?subject=Colaboración UGC" class="btn-gold">ESCRIBIRME AHORA →</a>
   <div class="cta-social">
     <a href="https://www.instagram.com/evelynaguilar_gt?igsh=N2xyZGowN3gyaTdp&utm_source=qr" target="_blank">📸 @evelynaguilar_gt</a>
