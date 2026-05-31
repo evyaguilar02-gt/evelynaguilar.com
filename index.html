@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evelyn Aguilar · Creadora · Estratega · Guatemalteca</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F4;
+    --cream-dark: #F2EDE8;
+    --gold: #D4A853;
+    --gold-light: #E8C878;
+    --gold-pale: #F5EDD8;
+    --mauve: #D4A0A0;
+    --mauve-light: #EDD5D5;
+    --brown: #2C2020;
+    --brown-mid: #4A3728;
+    --gray: #8A8480;
+    --gray-light: #C8C4C0;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 247, 244, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 168, 83, 0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: var(--brown);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    font-style: italic;
+    color: var(--mauve);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: 'EA';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(200px, 35vw, 400px);
+    color: rgba(212, 168, 83, 0.06);
+    bottom: -60px;
+    right: -40px;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-eyebrow span {
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+
+  .hero-name .first {
+    display: block;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 400;
+    color: var(--brown);
+  }
+
+  .hero-name .last {
+    display: block;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--mauve);
+  }
+
+  .hero-isologo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.5s forwards;
+  }
+
+  .hero-isologo::after {
+    content: '·';
+    color: var(--gold);
+    margin-left: 2px;
+    font-style: normal;
+  }
+
+  .hero-tagline {
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 300;
+    color: var(--brown-mid);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--gold);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--brown);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(44, 32, 32, 0.15);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    padding: 14px 36px;
+    background: transparent;
+    color: var(--brown);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(44, 32, 32, 0.25);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.2s forwards;
+  }
+
+  .hero-scroll span {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+< truncated lines 280-758 >
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── CARD INNER PADDING ─── */
+  .card-body { padding: 0 36px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+
+    .nav-links { display: none; }
+
+    section { padding: 72px 24px; }
+
+    #about { grid-template-columns: 1fr; gap: 48px; }
+
+    .about-frame { aspect-ratio: 4/3; }
+
+    .products-grid { grid-template-columns: 1fr; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+
+    footer { flex-direction: column; gap: 20px; text-align: center; }
+
+    .testimonial-strip { padding: 56px 24px; }
+
+    .divider { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Evelyn <span>Aguilar</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="max-width: 100%; padding-top: 120px;">
+  <p class="hero-eyebrow">Creadora <span>·</span> Estratega <span>·</span> Guatemalteca</p>
+  <h1 class="hero-name">
+    <span class="first">Evelyn</span>
+    <span class="last">Aguilar</span>
+  </h1>
+  <div class="hero-isologo">E</div>
+  <p class="hero-tagline">
+    Construyo negocios creativos desde Guatemala para el mundo.<br>
+    Contenido, estrategia y herramientas para creadoras que cobran lo que merecen.
+  </p>
+  <div class="hero-ctas">
+    <a href="#productos" class="btn-primary">Ver mis productos</a>
+    <a href="#about" class="btn-outline">Conocerme</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-frame">
+      <div class="about-frame-monogram">EA</div>
+      <div class="about-frame-label">Evelyn Aguilar · Guatemala City</div>
+    </div>
+    <div class="about-corner tl"></div>
+    <div class="about-corner br"></div>
+  </div>
+
+  <div class="about-content reveal">
+    <p class="section-eyebrow">Sobre mí</p>
+    <h2 class="section-title">Hola, soy<br><em>Evelyn.</em></h2>
+    <p class="about-text">
+      Soy <strong>creadora de contenido, estratega digital y fundadora</strong> de Briev Co., 
+      una agencia de marketing con base en Guatemala City. Me dedico a construir en voz alta — 
+      compartiendo el proceso real de monetizar tu talento en el mundo digital.
+    </p>
+    <p class="about-text">
+      Creo contenido sobre <strong>trabajo remoto, UGC y marca personal</strong> en TikTok e Instagram, 
+      y desarrollo productos digitales para creadoras latinoamericanas que quieren organizar y 
+      escalar su negocio creativo.
+    </p>
+
+    <div class="about-tags">
+      <span class="about-tag">UGC Creator</span>
+      <span class="about-tag">Marketing Agency</span>
+      <span class="about-tag">Trabajo Remoto</span>
+      <span class="about-tag">Guatemala</span>
+      <span class="about-tag">Freelance Education</span>
+    </div>
+
+    <div class="about-contact">
+      <p class="contact-label">Contacto directo</p>
+      <div class="contact-links">
+        <a href="mailto:hola@evelynaguilar.com" class="contact-link">hola@evelynaguilar.com</a>
+        <a href="https://instagram.com/ev.aglr" target="_blank" class="contact-link">@ev.aglr · Instagram</a>
+        <a href="https://tiktok.com/@evelynaguilar_gt" target="_blank" class="contact-link">@evelynaguilar_gt · TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-mark">✦</div><div class="divider-line"></div></div>
+
+<!-- PRODUCTS -->
+<section id="productos">
+  <div class="products-intro reveal">
+    <p class="section-eyebrow">Productos digitales</p>
+    <h2 class="section-title">Herramientas para<br>creadoras que van<br><em>en serio.</em></h2>
+    <p>Sistemas y recursos diseñados desde la experiencia real de vivir del contenido.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- PRODUCTO 1: THE CREATOR VAULT -->
+    <div class="product-card reveal">
+      <span class="card-badge">Disponible ahora</span>
+      <div class="card-header">
+        <div class="card-icon">🏛️</div>
+        <p class="card-sub">Sistema de Notion para Creadoras</p>
+        <h3 class="card-name">The Creator<br><em>Vault</em></h3>
+        <p class="card-desc">
+          Planifica tu contenido y gestiona tus marcas en un solo lugar. 
+          El sistema completo para organizar tu negocio creativo en Notion — 
+          sin hojas de cálculo dispersas, sin collabs perdidas.
+        </p>
+      </div>
+
+      <div class="card-body">
+        <ul class="card-features">
+          <li>Feed de Instagram en vivo dentro de Notion</li>
+          <li>CRM de marcas y clientes con seguimiento</li>
+          <li>Dashboard automático de ingresos</li>
+          <li>Métricas y audiencia en un solo lugar</li>
+          <li>Calendario de contenido integrado</li>
+        </ul>
+      </div>
+
+      <div class="card-footer">
+        <div>
+          <div class="card-price">
+            <span class="price-amount">$XX</span>
+            <span class="price-currency">USD · pago único</span>
+          </div>
+          <p class="price-note">Acceso inmediato · Actualizaciones incluidas</p>
+        </div>
+        <!-- REEMPLAZA el # con tu link de Hotmart -->
+        <a href="TU_LINK_HOTMART_AQUI" class="btn-primary" style="text-align:center;">
+          QUIERO THE CREATOR VAULT →
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCTO 2: PASAPORTE FREELANCE -->
+    <div class="product-card waitlist reveal">
+      <div class="card-header-bg">
+        <span class="waitlist-badge">🗓 Lista de espera abierta</span>
+        <p class="card-sub">Educación para Freelancers Latinas</p>
+        <h3 class="card-name">Pasaporte<br><em>Freelance</em></h3>
+        <p class="card-desc" style="margin-top:16px;">
+          La guía definitiva para latinas que quieren vivir del trabajo remoto. 
+          Aprende a conseguir clientes, fijar precios y construir una carrera 
+          freelance desde cualquier rincón de Latinoamérica.
+        </p>
+      </div>
+
+      <div class="card-body" style="padding-top: 24px;">
+        <ul class="card-features">
+          <li>Estrategia para conseguir tus primeros clientes</li>
+          <li>Cómo fijar precios y negociar como pro</li>
+          <li>Plataformas y nichos más rentables</li>
+          <li>Contratos, pagos y operación freelance</li>
+          <li>Comunidad de creadoras latinoamericanas</li>
+        </ul>
+      </div>
+
+      <div class="card-footer">
+        <div>
+          <div class="card-price">
+            <span class="price-amount" style="font-size:24px; color: var(--mauve);">Próximamente</span>
+          </div>
+          <p class="price-note">Únete a la lista · Precio especial para las primeras</p>
+        </div>
+        <!-- REEMPLAZA con tu link de Mailchimp -->
+        <a href="TU_LINK_MAILCHIMP_AQUI" target="_blank" class="btn-mauve">
+          UNIRME A LA LISTA DE ESPERA →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIAL STRIP -->
+<div class="testimonial-strip">
+  <blockquote>
+    "Todo tu negocio creativo, organizado.<br>Crea más. Conecta mejor. Cobra lo que mereces."
+  </blockquote>
+  <cite>Evelyn Aguilar · Guatemala City</cite>
+</div>
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="reveal" style="text-align: center;">
+    <p class="section-eyebrow">Hablemos</p>
+    <h2 class="section-title">¿Tienes un proyecto<br>o <em>colaboración</em>?</h2>
+    <p style="font-size:15px; color: var(--gray); max-width:480px; margin: 0 auto; line-height:1.8;">
+      Estoy abierta a colaboraciones de marcas, UGC y proyectos creativos. 
+      Escríbeme directamente.
+    </p>
+  </div>
+
+  <div class="contact-grid reveal">
+    <div class="contact-item">
+      <div class="contact-item-icon">✉️</div>
+      <p class="contact-item-label">Email</p>
+      <a href="mailto:hola@evelynaguilar.com" class="contact-item-value">hola@evelynaguilar.com</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">📸</div>
+      <p class="contact-item-label">Instagram</p>
+      <a href="https://instagram.com/ev.aglr" target="_blank" class="contact-item-value">@ev.aglr</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">🎵</div>
+      <p class="contact-item-label">TikTok</p>
+      <a href="https://tiktok.com/@evelynaguilar_gt" target="_blank" class="contact-item-value">@evelynaguilar_gt</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Evelyn <span>Aguilar</span></div>
+  <p class="footer-copy">© 2025 · Guatemala City · Todos los derechos reservados</p>
+  <div class="footer-mark">EA</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
