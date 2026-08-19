@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UGC Portfolio · Evelyn Aguilar · UGC Creator Guatemala</title>
-<meta name="description" content="Portfolio UGC de Evelyn Aguilar — creadora especializada en belleza, cuidado del cabello, moda, hospedaje, automotriz y eventos de marca. Contenido que convierte.">
+<meta name="description" content="Portfolio UGC de Evelyn Aguilar — creadora especializada en moda, belleza, cuidado del cabello, hospedaje, automotriz y eventos de marca. Contenido que convierte.">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3F3ZL8FQ"></script>
 <script>
@@ -22,7 +22,7 @@
   a{color:inherit;}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px;}
 
-  nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-border);}
+  nav.topnav{position:fixed;top:0;width:100%;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,247,244,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--gold-border);}
   .nav-logo{font-family:'Playfair Display',serif;font-size:18px;color:var(--brown);text-decoration:none;}
   .nav-logo span{font-style:italic;color:var(--mauve);}
   .nav-links{display:flex;gap:24px;list-style:none;}
@@ -41,7 +41,7 @@
   .btn-gold:hover{background:var(--brown);transform:translateY(-2px);}
 
   /* ============ HERO ============ */
-  .hero{padding:120px 48px 64px;text-align:center;max-width:860px;margin:0 auto;}
+  .hero{padding:120px 48px 56px;text-align:center;max-width:860px;margin:0 auto;}
   .eyebrow{font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
   .hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,64px);font-weight:400;line-height:1.15;margin-bottom:20px;color:var(--brown);}
   .hero h1 em{font-style:italic;color:var(--mauve);}
@@ -60,43 +60,52 @@
   .divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold-light),transparent);}
   .divider-mark{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:18px;}
 
-  /* ============ MARCAS (logos) ============ */
-  .marcas-section{max-width:1100px;margin:0 auto;padding:72px 48px 24px;text-align:center;}
+  /* ============ MARCAS (logos, prueba social) ============ */
+  .marcas-section{max-width:1100px;margin:0 auto;padding:64px 48px 24px;text-align:center;}
   .marcas-section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:400;margin-bottom:12px;color:var(--brown);}
   .marcas-section h2 em{font-style:italic;color:var(--mauve);}
-  .marcas-section>p{font-size:14px;color:var(--gray);max-width:520px;margin:0 auto 48px;}
-  .logos-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;}
-  .logo-tile{flex:0 1 calc(25% - 14px);aspect-ratio:16/9;background:var(--white);border:1px solid var(--gold-border);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:16px;transition:all 0.3s;overflow:hidden;position:relative;}
+  .marcas-section>p{font-size:14px;color:var(--gray);max-width:520px;margin:0 auto 40px;}
+  .logos-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;}
+  .logo-tile{flex:0 1 178px;max-width:200px;aspect-ratio:16/9;background:var(--white);border:1px solid var(--gold-border);border-radius:12px;display:flex;align-items:center;justify-content:center;padding:16px;transition:all 0.3s;overflow:hidden;text-decoration:none;position:relative;}
   .logo-tile:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 28px rgba(44,32,32,0.08);}
   .logo-tile img{max-width:100%;max-height:100%;object-fit:contain;}
   .logo-tile.as-text{font-family:'Playfair Display',serif;font-size:16px;color:var(--brown-mid);text-align:center;line-height:1.2;}
+  .logo-tile .logo-cta{position:absolute;bottom:6px;left:0;right:0;font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity 0.3s;}
+  .logo-tile:hover .logo-cta{opacity:1;}
 
-  /* ============ NICHOS + VIDEOS ============ */
-  .portfolio-section{max-width:1140px;margin:0 auto;padding:64px 48px 88px;}
-  .portfolio-header{text-align:center;margin-bottom:36px;}
-  .portfolio-header h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;margin-bottom:12px;color:var(--brown);}
-  .portfolio-header h2 em{font-style:italic;color:var(--mauve);}
-  .portfolio-header p{font-size:14px;color:var(--gray);max-width:520px;margin:0 auto;}
+  /* ============ PORTAFOLIO / NICHOS ============ */
+  .portfolio-intro{max-width:1140px;margin:0 auto;padding:56px 48px 0;text-align:center;}
+  .portfolio-intro h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;margin-bottom:12px;color:var(--brown);}
+  .portfolio-intro h2 em{font-style:italic;color:var(--mauve);}
+  .portfolio-intro p{font-size:14px;color:var(--gray);max-width:520px;margin:0 auto;}
 
-  .niche-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:52px;}
-  .niche-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--white);border:1px solid var(--gold-border);border-radius:40px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.08em;color:var(--brown-mid);cursor:pointer;transition:all 0.25s;min-height:44px;}
+  .niche-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:1140px;margin:32px auto 8px;padding:0 48px;}
+  .niche-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;background:var(--white);border:1px solid var(--gold-border);border-radius:40px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.08em;color:var(--brown-mid);text-decoration:none;transition:all 0.25s;min-height:44px;}
   .niche-pill .niche-ico{font-size:15px;line-height:1;}
-  .niche-pill:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
-  .niche-pill.active{background:var(--gold);border-color:var(--gold);color:var(--white);box-shadow:0 8px 20px rgba(212,168,83,0.3);}
+  .niche-pill:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);background:var(--gold-pale);}
 
-  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 28px;}
-  .video-card{display:flex;flex-direction:column;align-items:center;text-align:center;animation:fadeUp 0.5s ease both;}
+  /* Secciones por nicho */
+  .niche-section{max-width:1140px;margin:0 auto;padding:56px 48px 0;scroll-margin-top:88px;}
+  .niche-head{display:flex;align-items:center;gap:14px;margin-bottom:36px;}
+  .niche-head-ico{font-size:26px;line-height:1;flex-shrink:0;}
+  .niche-head h3{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);font-weight:400;color:var(--brown);white-space:nowrap;}
+  .niche-head h3 em{font-style:italic;color:var(--mauve);}
+  .niche-head-line{flex:1;height:1px;background:linear-gradient(to right,var(--gold-border),transparent);min-width:24px;}
+  .niche-count{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);white-space:nowrap;flex-shrink:0;}
+
+  .video-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:40px 26px;}
+  .video-card{flex:0 1 236px;max-width:248px;display:flex;flex-direction:column;align-items:center;text-align:center;scroll-margin-top:100px;animation:fadeUp 0.5s ease both;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
 
   /* iPhone mockup */
-  .phone{width:100%;max-width:210px;}
+  .phone{width:100%;max-width:206px;}
   .phone-shell{position:relative;background:#1a1a1a;border-radius:34px;padding:9px;box-shadow:0 22px 50px rgba(44,32,32,0.22),inset 0 0 0 2px #2a2a2a;}
   .phone-notch{width:74px;height:19px;background:#1a1a1a;border-radius:0 0 11px 11px;position:absolute;top:9px;left:50%;transform:translateX(-50%);z-index:6;}
   .phone-screen{border-radius:25px;overflow:hidden;background:#000;aspect-ratio:9/16;position:relative;}
   .phone-screen iframe{width:100%;height:100%;border:none;display:block;}
   .phone-home{width:72px;height:3px;background:#333;border-radius:3px;margin:7px auto 0;}
 
-  /* Facade que reproduce el video DENTRO del sitio */
+  /* Facade: reproduce el video DENTRO del sitio */
   .video-facade{position:relative;width:100%;height:100%;cursor:pointer;display:block;}
   .video-facade .video-thumb{width:100%;height:100%;object-fit:cover;display:block;}
   .video-facade::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.35));transition:background 0.3s;}
@@ -105,23 +114,17 @@
   .video-facade:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);background:var(--gold);}
   .play-btn svg{width:22px;height:22px;fill:var(--white);margin-left:3px;}
 
-  .video-meta{padding-top:16px;max-width:230px;}
+  .video-meta{padding-top:16px;}
   /* Logo de la marca DEBAJO del video */
   .video-logo{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 16px;background:var(--white);border:1px solid var(--gold-border);border-radius:30px;margin-bottom:12px;max-width:170px;}
   .video-logo img{max-height:24px;max-width:120px;object-fit:contain;display:block;}
   .video-logo.as-text{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);font-weight:500;}
   .video-logo.edit-badge{color:var(--mauve-dark);letter-spacing:0.1em;}
   .video-meta h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;color:var(--brown);margin-bottom:8px;line-height:1.3;}
-  .video-meta p{font-size:11.5px;color:var(--gray);line-height:1.6;margin-bottom:12px;}
-  .niche-chip{display:inline-block;font-size:9px;letter-spacing:0.08em;padding:5px 12px;background:var(--mauve-light);color:var(--mauve-dark);border-radius:20px;}
-
-  .empty-state{display:none;text-align:center;padding:56px 24px;grid-column:1/-1;}
-  .empty-state .empty-ico{font-size:40px;display:block;margin-bottom:16px;}
-  .empty-state h3{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--brown);margin-bottom:8px;}
-  .empty-state p{font-size:13px;color:var(--gray);max-width:360px;margin:0 auto;}
+  .video-meta p{font-size:11.5px;color:var(--gray);line-height:1.6;}
 
   /* ============ EQUIPO ============ */
-  .equipo-section{background:var(--cream-dark);padding:80px 48px;text-align:center;}
+  .equipo-section{background:var(--cream-dark);padding:80px 48px;text-align:center;margin-top:72px;}
   .equipo-inner{max-width:1000px;margin:0 auto;}
   .equipo-inner h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-weight:400;margin-bottom:12px;color:var(--brown);}
   .equipo-inner h2 em{font-style:italic;color:var(--gold);}
@@ -159,15 +162,14 @@
   .footer-copy{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray-light);}
 
   /* ============ RESPONSIVE ============ */
-  @media(max-width:1000px){
-    .video-grid{grid-template-columns:repeat(2,1fr);gap:36px 20px;}
-  }
   @media(max-width:768px){
-    nav{padding:14px 20px;}
-    .hero{padding:100px 24px 48px;}
-    .marcas-section{padding:56px 24px 16px;}
-    .logo-tile{flex-basis:calc(33.333% - 12px);}
-    .portfolio-section{padding:52px 24px 64px;}
+    nav.topnav{padding:14px 20px;}
+    .hero{padding:100px 24px 44px;}
+    .marcas-section{padding:48px 24px 16px;}
+    .logo-tile{flex-basis:calc(33.333% - 11px);}
+    .portfolio-intro{padding:48px 24px 0;}
+    .niche-bar{padding:0 24px;}
+    .niche-section{padding:48px 24px 0;}
     .equipo-section{padding:60px 24px;}
     .equipo-grid{grid-template-columns:repeat(3,1fr);gap:16px;}
     .proceso-section{padding:60px 24px;}
@@ -178,10 +180,9 @@
     .divider{padding:0 24px;}
   }
   @media(max-width:520px){
-    .logo-tile{flex-basis:calc(50% - 9px);}
-    .video-grid{grid-template-columns:1fr;gap:44px;max-width:320px;margin-left:auto;margin-right:auto;}
-    .phone{max-width:230px;}
-    .video-meta{max-width:260px;}
+    .logo-tile{flex-basis:calc(50% - 8px);}
+    .video-card{flex-basis:240px;}
+    .phone{max-width:224px;}
     .niche-bar{gap:8px;}
     .niche-pill{padding:10px 16px;font-size:10.5px;}
   }
@@ -193,7 +194,7 @@
 </head>
 <body>
 
-<nav>
+<nav class="topnav">
   <a href="/" class="nav-logo">Evelyn <span>Aguilar</span></a>
   <ul class="nav-links">
     <li><a href="/#about">Sobre mí</a></li>
@@ -221,13 +222,13 @@
 
 <!-- ============ HERO ============ -->
 <div class="hero">
-  <p class="eyebrow">UGC Creator · Belleza · Cabello · Moda · Hospedaje · Automotriz · Eventos</p>
+  <p class="eyebrow">UGC Creator · Moda · Belleza · Cabello · Hospedaje · Automotriz · Eventos</p>
   <h1>Portfolio <em>Creativo</em></h1>
   <p class="hero-intro">Soy Evelyn Aguilar, creadora UGC con experiencia trabajando con marcas que buscan contenido que convierte. Entiendo lo que una agencia o marca necesita antes de grabar: tono, audiencia, objetivo y resultado. Creo piezas estratégicas — con hook, narrativa y CTA — que se integran naturalmente al feed y activan la intención de compra.</p>
   <div class="hero-tags">
+    <span class="hero-tag">👗 Moda</span>
     <span class="hero-tag">💄 Belleza</span>
     <span class="hero-tag">💆 Cuidado del cabello</span>
-    <span class="hero-tag">👗 Moda</span>
     <span class="hero-tag">🏨 Hospedaje</span>
     <span class="hero-tag">🚗 Automotriz</span>
     <span class="hero-tag">🎟️ Eventos de marca</span>
@@ -250,62 +251,62 @@
 
 <!-- ============ MARCAS CON LAS QUE HE TRABAJADO ============ -->
 <!--
-  👉 LOGOS: sube estos archivos al repo (raíz, junto a index.html):
-     logo-indgo.png · logo-elena-melena.png · logo-geely.png
-     logo-herbal-essences.jpg · logo-medellin-vibes.jpg
+  👉 LOGOS: sube al repo (raíz, junto a index.html):
+     logo-indgo.png · logo-herbal-essences.jpg · logo-geely.png
+     logo-elena-melena.png · logo-medellin-vibes.jpg
+  Cada logo es un enlace: al tocarlo lleva a los videos de esa marca (href="#...").
   Si un logo aún no existe, la tarjeta muestra el nombre de la marca.
-  Para una marca sin logo, usa una tarjeta <div class="logo-tile as-text">Nombre</div>.
 -->
 <div class="marcas-section">
   <p class="eyebrow" style="color:var(--gold);">Colaboraciones</p>
   <h2>Marcas con las que he <em>trabajado</em></h2>
-  <p>Cada colaboración tiene una estrategia detrás — hook, narrativa y CTA diseñados para el objetivo de cada marca.</p>
+  <p>Toca una marca para ver su contenido. Cada colaboración tiene una estrategia detrás — hook, narrativa y CTA.</p>
   <div class="logos-grid">
-    <div class="logo-tile"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO by Denim Art'"></div>
-    <div class="logo-tile"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-elena-melena.png" alt="Elena Melena" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Elena Melena'"></div>
-    <div class="logo-tile"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-herbal-essences.jpg" alt="Herbal Essences" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Herbal Essences'"></div>
-    <div class="logo-tile"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-geely.png" alt="Geely" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Geely'"></div>
-    <div class="logo-tile"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes Hostel'"></div>
-    <div class="logo-tile as-text">Michael Kors</div>
-    <div class="logo-tile as-text">Lancôme</div>
-    <div class="logo-tile as-text">Head &amp; Shoulders</div>
-    <div class="logo-tile as-text">Mírate Guapa</div>
+    <a class="logo-tile" href="#niche-moda" title="Ver videos de INDGO"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO by Denim Art'"><span class="logo-cta">Ver videos →</span></a>
+    <a class="logo-tile" href="#video-herbal" title="Ver videos de Herbal Essences"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-herbal-essences.jpg" alt="Herbal Essences" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Herbal Essences'"><span class="logo-cta">Ver videos →</span></a>
+    <a class="logo-tile" href="#niche-automotriz" title="Ver videos de Geely"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-geely.png" alt="Geely" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Geely'"><span class="logo-cta">Ver videos →</span></a>
+    <a class="logo-tile" href="#video-elena" title="Ver videos de Elena Melena"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-elena-melena.png" alt="Elena Melena" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Elena Melena'"><span class="logo-cta">Ver videos →</span></a>
+    <a class="logo-tile" href="#niche-hospedaje" title="Ver videos de Medellín Vibes Hostel"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes Hostel'"><span class="logo-cta">Ver videos →</span></a>
   </div>
 </div>
 
-<!-- ============ NICHOS + VIDEOS ============ -->
-<div class="portfolio-section">
-  <div class="portfolio-header">
-    <p class="eyebrow" style="color:var(--gold);">Explora por nicho</p>
-    <h2>Mi <em>contenido</em></h2>
-    <p>Toca un nicho para filtrar los videos. Todo se reproduce aquí mismo, sin salir del sitio.</p>
+<!-- ============ PORTAFOLIO ============ -->
+<div class="portfolio-intro">
+  <p class="eyebrow" style="color:var(--gold);">Portafolio</p>
+  <h2>Mi <em>contenido</em> por nicho</h2>
+  <p>Cada video se reproduce aquí mismo, sin salir del sitio. Toca un nicho para saltar a esa sección.</p>
+</div>
+
+<!-- Navegación rápida por nicho (saltan a cada sección) -->
+<nav class="niche-bar" aria-label="Ir a un nicho">
+  <a class="niche-pill" href="#niche-moda"><span class="niche-ico">👗</span> Moda</a>
+  <a class="niche-pill" href="#niche-belleza"><span class="niche-ico">💄</span> Belleza y Cabello</a>
+  <a class="niche-pill" href="#niche-automotriz"><span class="niche-ico">🚗</span> Automotriz</a>
+  <a class="niche-pill" href="#niche-hospedaje"><span class="niche-ico">🏨</span> Hospedaje</a>
+  <a class="niche-pill" href="#niche-eventos"><span class="niche-ico">🎟️</span> Eventos de Marca</a>
+  <a class="niche-pill" href="#niche-transiciones"><span class="niche-ico">🎞️</span> Transiciones</a>
+</nav>
+
+<!--
+  👉 AGREGAR UN VIDEO: copia un bloque <article class="video-card"> completo
+     DENTRO del <div class="video-grid"> del nicho que corresponda.
+     - data-id="ID" (en youtube.com/shorts/ID el ID es lo de después de /shorts/)
+       Cámbialo en el .video-facade Y en las DOS URL de la miniatura.
+     - logo: <span class="video-logo"><img src="...logo-x.png" ...></span>
+       o, si no hay logo, <span class="video-logo as-text">Nombre</span>
+-->
+
+<!-- ===================== MODA · INDGO ===================== -->
+<section class="niche-section" id="niche-moda">
+  <div class="niche-head">
+    <span class="niche-head-ico">👗</span>
+    <h3>Moda</h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">4 videos · INDGO</span>
   </div>
+  <div class="video-grid">
 
-  <!-- Filtros de nicho -->
-  <div class="niche-bar" role="tablist" aria-label="Filtrar por nicho">
-    <button class="niche-pill" role="tab" aria-selected="true"  onclick="filterNiche('todos', this)"><span class="niche-ico">✦</span> Todos</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('belleza', this)"><span class="niche-ico">💄</span> Belleza</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('cabello', this)"><span class="niche-ico">💆</span> Cuidado del cabello</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('moda', this)"><span class="niche-ico">👗</span> Moda / Ropa</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('hospedaje', this)"><span class="niche-ico">🏨</span> Hospedaje</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('automotriz', this)"><span class="niche-ico">🚗</span> Automotriz</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('eventos', this)"><span class="niche-ico">🎟️</span> Eventos de Marca</button>
-    <button class="niche-pill" role="tab" aria-selected="false" onclick="filterNiche('transiciones', this)"><span class="niche-ico">🎞️</span> Transiciones</button>
-  </div>
-
-  <!--
-    👉 AGREGAR UN VIDEO: copia un bloque <article class="video-card"> completo.
-       - data-niche="..."  → belleza, cabello, moda, hospedaje, automotriz, eventos, transiciones
-         (varios separados por espacio, ej. data-niche="belleza cabello")
-       - data-id="ID"      → el ID del video (en youtube.com/shorts/ID el ID es lo de después de /shorts/)
-         Cámbialo en el .video-facade Y en las DOS URL de la miniatura.
-       - logo: usa <span class="video-logo"><img src="...logo-x.png" ...></span>
-         o, si no hay logo, <span class="video-logo as-text">Nombre</span>
-  -->
-  <div class="video-grid" id="videoGrid">
-
-    <!-- ===================== MODA · INDGO ===================== -->
-    <article class="video-card" data-niche="moda">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="CuP4L-hczB0" role="button" tabindex="0" aria-label="Reproducir: INDGO Campaña Mundial" onclick="playVideo(this)">
@@ -315,14 +316,13 @@
         </div>
       <div class="phone-home"></div></div></div>
       <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO by Denim Art'"></span>
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO'"></span>
         <h4>Campaña Mundial</h4>
         <p>Pieza para la campaña mundial de INDGO — estética cuidada y storytelling de marca.</p>
-        <span class="niche-chip">👗 Moda</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="moda">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="gcHFfjMs_Oc" role="button" tabindex="0" aria-label="Reproducir: INDGO Campaña 3x2" onclick="playVideo(this)">
@@ -332,85 +332,58 @@
         </div>
       <div class="phone-home"></div></div></div>
       <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO by Denim Art'"></span>
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO'"></span>
         <h4>Campaña 3x2</h4>
         <p>Video para activar ventas con la promo 3x2: urgencia, FOMO y CTA directo a compra.</p>
-        <span class="niche-chip">👗 Moda</span>
       </div>
     </article>
 
-    <!-- ===================== AUTOMOTRIZ · GEELY ===================== -->
-    <article class="video-card" data-niche="automotriz">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="video-facade" data-id="L10tj7kYqdk" role="button" tabindex="0" aria-label="Reproducir: Geely Campaña Excel Fest" onclick="playVideo(this)">
-            <img class="video-thumb" loading="lazy" alt="Geely Campaña Excel Fest" src="https://i.ytimg.com/vi/L10tj7kYqdk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/L10tj7kYqdk/hqdefault.jpg'">
+          <div class="video-facade" data-id="e2qlxmJjGHU" role="button" tabindex="0" aria-label="Reproducir: INDGO Campaña Día del Padre" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="INDGO Campaña Día del Padre" src="https://i.ytimg.com/vi/e2qlxmJjGHU/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/e2qlxmJjGHU/hqdefault.jpg'">
             <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
         </div>
       <div class="phone-home"></div></div></div>
       <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-geely.png" alt="Geely" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Geely'"></span>
-        <h4>Campaña Excel Fest</h4>
-        <p>Cobertura del stand Geely en el Excel Fest — tecnología, interior y diseño del vehículo.</p>
-        <span class="niche-chip">🚗 Automotriz</span>
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO'"></span>
+        <h4>Campaña Día del Padre</h4>
+        <p>Contenido de temporada para impulsar ventas por el Día del Padre.</p>
       </div>
     </article>
 
-    <!-- ===================== HOSPEDAJE · MEDELLÍN VIBES ===================== -->
-    <article class="video-card" data-niche="hospedaje">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="video-facade" data-id="g6zump0pTRw" role="button" tabindex="0" aria-label="Reproducir: Historia Medellín Vibes Hostel" onclick="playVideo(this)">
-            <img class="video-thumb" loading="lazy" alt="Historia Medellín Vibes Hostel" src="https://i.ytimg.com/vi/g6zump0pTRw/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/g6zump0pTRw/hqdefault.jpg'">
+          <div class="video-facade" data-id="P8KGAq4-7Ms" role="button" tabindex="0" aria-label="Reproducir: INDGO Denim Day" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="INDGO Denim Day" src="https://i.ytimg.com/vi/P8KGAq4-7Ms/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/P8KGAq4-7Ms/hqdefault.jpg'">
             <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
         </div>
       <div class="phone-home"></div></div></div>
       <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes Hostel'"></span>
-        <h4>Historia del Hostel</h4>
-        <p>Formato historia mostrando la experiencia de hospedarse en Medellín Vibes.</p>
-        <span class="niche-chip">🏨 Hospedaje</span>
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-indgo.png" alt="INDGO by Denim Art" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='INDGO'"></span>
+        <h4>Denim Day</h4>
+        <p>Video para activar ventas en el Denim Day con promo y CTA a compra.</p>
       </div>
     </article>
 
-    <article class="video-card" data-niche="hospedaje">
-      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="video-facade" data-id="pdzbRRlwa14" role="button" tabindex="0" aria-label="Reproducir: Reel Medellín Vibes Hostel" onclick="playVideo(this)">
-            <img class="video-thumb" loading="lazy" alt="Reel Medellín Vibes Hostel" src="https://i.ytimg.com/vi/pdzbRRlwa14/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/pdzbRRlwa14/hqdefault.jpg'">
-            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-        </div>
-      <div class="phone-home"></div></div></div>
-      <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes Hostel'"></span>
-        <h4>Reel del Hostel</h4>
-        <p>Reel dinámico mostrando el ambiente y los espacios del hostel.</p>
-        <span class="niche-chip">🏨 Hospedaje</span>
-      </div>
-    </article>
+  </div>
+</section>
 
-    <article class="video-card" data-niche="hospedaje">
-      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="video-facade" data-id="ETfQmL8gFE4" role="button" tabindex="0" aria-label="Reproducir: Habitación con Jacuzzi" onclick="playVideo(this)">
-            <img class="video-thumb" loading="lazy" alt="Medellín Vibes Habitación con Jacuzzi" src="https://i.ytimg.com/vi/ETfQmL8gFE4/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ETfQmL8gFE4/hqdefault.jpg'">
-            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-          </div>
-        </div>
-      <div class="phone-home"></div></div></div>
-      <div class="video-meta">
-        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes Hostel'"></span>
-        <h4>Habitación con Jacuzzi</h4>
-        <p>Tour de la habitación con jacuzzi — el detalle que enamora al huésped.</p>
-        <span class="niche-chip">🏨 Hospedaje</span>
-      </div>
-    </article>
+<!-- ===================== BELLEZA Y CUIDADO DEL CABELLO ===================== -->
+<section class="niche-section" id="niche-belleza">
+  <div class="niche-head">
+    <span class="niche-head-ico">💄</span>
+    <h3>Belleza y <em>Cuidado del Cabello</em></h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">2 videos</span>
+  </div>
+  <div class="video-grid">
 
-    <!-- ===================== BELLEZA + CABELLO ===================== -->
-    <article class="video-card" data-niche="belleza cabello">
+    <article class="video-card" id="video-herbal">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="w09IbN577ic" role="button" tabindex="0" aria-label="Reproducir: Herbal Essences Campaña Rosa Mosqueta" onclick="playVideo(this)">
@@ -423,11 +396,10 @@
         <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-herbal-essences.jpg" alt="Herbal Essences" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Herbal Essences'"></span>
         <h4>Campaña Rosa Mosqueta</h4>
         <p>Contenido para la línea Rosa Mosqueta de Herbal Essences.</p>
-        <span class="niche-chip">💆 Belleza &amp; Cabello</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="belleza cabello">
+    <article class="video-card" id="video-elena">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="gmuctxHT5nY" role="button" tabindex="0" aria-label="Reproducir: Elena Melena Campaña Aroma a Coco" onclick="playVideo(this)">
@@ -440,12 +412,113 @@
         <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-elena-melena.png" alt="Elena Melena" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Elena Melena'"></span>
         <h4>Campaña Aroma a Coco</h4>
         <p>Contenido para la línea aroma a coco, basado en experiencia real de uso.</p>
-        <span class="niche-chip">💆 Belleza &amp; Cabello</span>
       </div>
     </article>
 
-    <!-- ===================== EVENTOS DE MARCA ===================== -->
-    <article class="video-card" data-niche="eventos">
+  </div>
+</section>
+
+<!-- ===================== AUTOMOTRIZ · GEELY ===================== -->
+<section class="niche-section" id="niche-automotriz">
+  <div class="niche-head">
+    <span class="niche-head-ico">🚗</span>
+    <h3>Automotriz</h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">1 video · Geely</span>
+  </div>
+  <div class="video-grid">
+
+    <article class="video-card">
+      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="video-facade" data-id="L10tj7kYqdk" role="button" tabindex="0" aria-label="Reproducir: Geely Campaña Excel Fest" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="Geely Campaña Excel Fest" src="https://i.ytimg.com/vi/L10tj7kYqdk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/L10tj7kYqdk/hqdefault.jpg'">
+            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      <div class="phone-home"></div></div></div>
+      <div class="video-meta">
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-geely.png" alt="Geely" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Geely'"></span>
+        <h4>Campaña Excel Fest</h4>
+        <p>Cobertura del stand Geely en el Excel Fest — tecnología, interior y diseño del vehículo.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== HOSPEDAJE · MEDELLÍN VIBES ===================== -->
+<section class="niche-section" id="niche-hospedaje">
+  <div class="niche-head">
+    <span class="niche-head-ico">🏨</span>
+    <h3>Hospedaje</h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">3 videos · Medellín Vibes</span>
+  </div>
+  <div class="video-grid">
+
+    <article class="video-card">
+      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="video-facade" data-id="g6zump0pTRw" role="button" tabindex="0" aria-label="Reproducir: Historia Medellín Vibes Hostel" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="Historia Medellín Vibes Hostel" src="https://i.ytimg.com/vi/g6zump0pTRw/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/g6zump0pTRw/hqdefault.jpg'">
+            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      <div class="phone-home"></div></div></div>
+      <div class="video-meta">
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes'"></span>
+        <h4>Historia del Hostel</h4>
+        <p>Formato historia mostrando la experiencia de hospedarse en Medellín Vibes.</p>
+      </div>
+    </article>
+
+    <article class="video-card">
+      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="video-facade" data-id="pdzbRRlwa14" role="button" tabindex="0" aria-label="Reproducir: Reel Medellín Vibes Hostel" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="Reel Medellín Vibes Hostel" src="https://i.ytimg.com/vi/pdzbRRlwa14/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/pdzbRRlwa14/hqdefault.jpg'">
+            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      <div class="phone-home"></div></div></div>
+      <div class="video-meta">
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes'"></span>
+        <h4>Reel del Hostel</h4>
+        <p>Reel dinámico mostrando el ambiente y los espacios del hostel.</p>
+      </div>
+    </article>
+
+    <article class="video-card">
+      <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="video-facade" data-id="ETfQmL8gFE4" role="button" tabindex="0" aria-label="Reproducir: Habitación con Jacuzzi" onclick="playVideo(this)">
+            <img class="video-thumb" loading="lazy" alt="Medellín Vibes Habitación con Jacuzzi" src="https://i.ytimg.com/vi/ETfQmL8gFE4/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ETfQmL8gFE4/hqdefault.jpg'">
+            <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+      <div class="phone-home"></div></div></div>
+      <div class="video-meta">
+        <span class="video-logo"><img src="https://evyaguilar02-gt.github.io/evelynaguilar.com/logo-medellin-vibes.jpg" alt="Medellín Vibes Hostel" onerror="this.parentNode.classList.add('as-text');this.parentNode.textContent='Medellín Vibes'"></span>
+        <h4>Habitación con Jacuzzi</h4>
+        <p>Tour de la habitación con jacuzzi — el detalle que enamora al huésped.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== EVENTOS DE MARCA ===================== -->
+<section class="niche-section" id="niche-eventos">
+  <div class="niche-head">
+    <span class="niche-head-ico">🎟️</span>
+    <h3>Eventos de <em>Marca</em></h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">3 videos</span>
+  </div>
+  <div class="video-grid">
+
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="ekOqGNgLWjE" role="button" tabindex="0" aria-label="Reproducir: Evento Lancôme" onclick="playVideo(this)">
@@ -458,11 +531,10 @@
         <span class="video-logo as-text">Lancôme</span>
         <h4>Evento Lancôme</h4>
         <p>Cobertura de evento de marca — ambiente, producto y experiencia.</p>
-        <span class="niche-chip">🎟️ Evento de Marca</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="eventos">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="oOL8_KgSC5E" role="button" tabindex="0" aria-label="Reproducir: Evento Michael Kors" onclick="playVideo(this)">
@@ -475,11 +547,10 @@
         <span class="video-logo as-text">Michael Kors</span>
         <h4>Evento Michael Kors</h4>
         <p>Cobertura de evento de marca con tono aspiracional y auténtico.</p>
-        <span class="niche-chip">🎟️ Evento de Marca</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="eventos">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="tvbzLtOoG2U" role="button" tabindex="0" aria-label="Reproducir: Estreno The Devil Wears Prada" onclick="playVideo(this)">
@@ -492,14 +563,24 @@
         <span class="video-logo as-text">The Devil Wears Prada</span>
         <h4>Estreno · The Devil Wears Prada</h4>
         <p>Cobertura del estreno — alfombra, ambiente y experiencia del evento.</p>
-        <span class="niche-chip">🎟️ Evento de Marca</span>
       </div>
     </article>
 
-    <!-- ===================== TRANSICIONES · EDICIÓN ===================== -->
-    <!-- 👉 Puedes cambiar el título de esta sección: es el botón "Transiciones" de arriba
-         y el chip "🎞️ Transiciones" de cada tarjeta. -->
-    <article class="video-card" data-niche="transiciones">
+  </div>
+</section>
+
+<!-- ===================== TRANSICIONES · EDICIÓN ===================== -->
+<!-- 👉 Cambia el título de la sección aquí (h3) y en el botón "Transiciones" de arriba. -->
+<section class="niche-section" id="niche-transiciones">
+  <div class="niche-head">
+    <span class="niche-head-ico">🎞️</span>
+    <h3>Transiciones <em>Creativas</em></h3>
+    <span class="niche-head-line"></span>
+    <span class="niche-count">5 videos · Mi edición</span>
+  </div>
+  <div class="video-grid">
+
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="hy89RCX5z3I" role="button" tabindex="0" aria-label="Reproducir: Transición creativa 01" onclick="playVideo(this)">
@@ -512,11 +593,10 @@
         <span class="video-logo as-text edit-badge">✂️ Mi edición</span>
         <h4>Transición creativa · 01</h4>
         <p>Muestra de edición dinámica y transiciones al ritmo.</p>
-        <span class="niche-chip">🎞️ Transiciones</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="transiciones">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="2zSHYekQM_U" role="button" tabindex="0" aria-label="Reproducir: Transición creativa 02" onclick="playVideo(this)">
@@ -529,11 +609,10 @@
         <span class="video-logo as-text edit-badge">✂️ Mi edición</span>
         <h4>Transición creativa · 02</h4>
         <p>Corte y transición para mantener la atención de principio a fin.</p>
-        <span class="niche-chip">🎞️ Transiciones</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="transiciones">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="afF6o0wxYZU" role="button" tabindex="0" aria-label="Reproducir: Transición creativa 03" onclick="playVideo(this)">
@@ -546,11 +625,10 @@
         <span class="video-logo as-text edit-badge">✂️ Mi edición</span>
         <h4>Transición creativa · 03</h4>
         <p>Edición fluida que le da ritmo y personalidad al contenido.</p>
-        <span class="niche-chip">🎞️ Transiciones</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="transiciones">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="SHPyRZLAECE" role="button" tabindex="0" aria-label="Reproducir: Transición creativa 04" onclick="playVideo(this)">
@@ -563,11 +641,10 @@
         <span class="video-logo as-text edit-badge">✂️ Mi edición</span>
         <h4>Transición creativa · 04</h4>
         <p>Transición pensada para el scroll — engancha en el primer segundo.</p>
-        <span class="niche-chip">🎞️ Transiciones</span>
       </div>
     </article>
 
-    <article class="video-card" data-niche="transiciones">
+    <article class="video-card">
       <div class="phone"><div class="phone-shell"><div class="phone-notch"></div>
         <div class="phone-screen">
           <div class="video-facade" data-id="PfBBrroZtvo" role="button" tabindex="0" aria-label="Reproducir: Transición creativa 05" onclick="playVideo(this)">
@@ -580,19 +657,11 @@
         <span class="video-logo as-text edit-badge">✂️ Mi edición</span>
         <h4>Transición creativa · 05</h4>
         <p>Muestra de mis transiciones y estilo de edición.</p>
-        <span class="niche-chip">🎞️ Transiciones</span>
       </div>
     </article>
 
-    <!-- Mensaje cuando un nicho aún no tiene videos -->
-    <div class="empty-state" id="emptyState">
-      <span class="empty-ico">🎬</span>
-      <h3>Contenido en camino</h3>
-      <p>Pronto subo el contenido de <strong class="empty-niche">este nicho</strong>. Mientras, revisa los otros o escríbeme para una colaboración.</p>
-    </div>
-
   </div>
-</div>
+</section>
 
 <!-- ============ EQUIPO ============ -->
 <div class="equipo-section">
@@ -665,7 +734,7 @@
 (function(){
   "use strict";
 
-  /* --- Reproducir el video DENTRO del sitio (no abre YouTube) --- */
+  /* Reproducir el video DENTRO del sitio (no abre YouTube) */
   function playVideo(el){
     var id = el.getAttribute("data-id");
     if(!id){ return; }
@@ -680,61 +749,10 @@
     el.classList.add("is-playing");
   }
 
-  /* --- Etiquetas para el mensaje de "nicho vacío" --- */
-  var LABELS = {
-    todos: "este nicho",
-    belleza: "Belleza",
-    cabello: "Cuidado del cabello",
-    moda: "Moda / Ropa",
-    hospedaje: "Hospedaje",
-    automotriz: "Automotriz",
-    eventos: "Eventos de Marca",
-    transiciones: "Transiciones"
-  };
-
-  /* --- Filtrar videos por nicho --- */
-  function filterNiche(niche, btn){
-    var cards = document.querySelectorAll(".video-card");
-    var shown = 0;
-    for(var i=0;i<cards.length;i++){
-      var tags = cards[i].getAttribute("data-niche") || "";
-      var list = tags.split(" ");
-      var match = (niche === "todos") || (list.indexOf(niche) !== -1);
-      cards[i].style.display = match ? "" : "none";
-      if(match){ shown++; }
-    }
-
-    var pills = document.querySelectorAll(".niche-pill");
-    for(var j=0;j<pills.length;j++){
-      pills[j].classList.remove("active");
-      pills[j].setAttribute("aria-selected","false");
-    }
-    if(btn){
-      btn.classList.add("active");
-      btn.setAttribute("aria-selected","true");
-    }
-
-    var empty = document.getElementById("emptyState");
-    if(empty){
-      if(shown === 0){
-        var label = empty.querySelector(".empty-niche");
-        if(label){ label.textContent = LABELS[niche] || "este nicho"; }
-        empty.style.display = "block";
-      } else {
-        empty.style.display = "none";
-      }
-    }
-  }
-
-  /* Exponer para los onclick del HTML */
   window.playVideo = playVideo;
-  window.filterNiche = filterNiche;
 
-  /* Init: marcar "Todos" y activar Enter/Espacio en las miniaturas */
+  /* Enter/Espacio para reproducir desde el teclado */
   document.addEventListener("DOMContentLoaded", function(){
-    var first = document.querySelector(".niche-pill");
-    if(first){ first.classList.add("active"); first.setAttribute("aria-selected","true"); }
-
     var facades = document.querySelectorAll(".video-facade");
     for(var k=0;k<facades.length;k++){
       facades[k].addEventListener("keydown", function(e){
@@ -750,3 +768,4 @@
 
 </body>
 </html>
+
